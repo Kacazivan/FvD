@@ -4,12 +4,9 @@
 /* FONTS */
 /*********/
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
+	font-family: 'SoDoSans-Bold';
+	src: url('../fonts/SoDoSans-Bold.61c2ffb.woff2') format('woff2');
 	font-style: normal;
-
 }
 
 
@@ -37,7 +34,10 @@ button:not(:disabled), summary {
 :root {
 	/* startje */
 	--color-text:#111;
-	--color-background:#eee;
+	--color-background:#f2f0ea;
+	--house-green: #1e3932;
+	--light-green: #d4e8e2;
+	--starbucks-green: #036142;
 }
 
 
@@ -48,9 +48,14 @@ button:not(:disabled), summary {
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:eenfont, sans-serif;
+  font-family:'SoDoSans-Regular', sans-serif;
   color:var(--color-text);
   background-color:var(--color-background);
+}
+
+span{
+	font-family: 'SoDoSans-Bold';
+	color: var(--house-green);
 }
 
 /* jouw code */

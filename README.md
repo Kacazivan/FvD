@@ -27,15 +27,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+  <img src="readme-images/Storyboard_Starbucks.png" width="375px" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Effecten als stoom leren coderen.
+  - Een koffie automaat coderen m.b.v. svgtjes?
+  - En natuurlijk letters leren animeren, want dat heb ik nog nooit gedaan.
+
+  Dus het zal zeker een uitdaging zijn :)
  
 </details>
 
