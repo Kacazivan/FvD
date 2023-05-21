@@ -53,10 +53,49 @@ body {
   background-color:var(--color-background);
 }
 
+
+/* jouw code */
 span{
 	font-family: 'SoDoSans-Bold';
 	color: var(--house-green);
 }
 
-/* jouw code */
+/*opfrismiddel flexbox -> https://ishadeed.com/article/learn-css-centering/#:~:text=To%20center%20an%20inline%20element,is%20text%2Dalign%3A%20center%20.&text=For%20multiple%20inline%20elements%2C%20the,using%20text%2Dalign%3A%20center%20.*/
+h1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+span:nth-of-type(5){
+	animation-name: letterB;
+	animation-duration: 5s;
+}
+
+/*hulpmiddel met scaleX -> https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
+@keyframes letterB{
+  0%{
+    transform: scaleX(1);
+  }
+
+  20%{
+    transform: scaleX(0.6);
+  }
+  
+  40%{
+    transform: scaleX(0.6);
+  }
+
+	60%{
+    transform: scaleX(0.4);
+	}
+
+	80%{
+    transform: scaleX(0.2);
+	}
+
+  100%{
+		transform: scaleX(0.1);
+  }
+}
 
