@@ -60,8 +60,9 @@ span{
 	color: var(--house-green);
 }
 
-/*opfrismiddel flexbox -> https://ishadeed.com/article/learn-css-centering/#:~:text=To%20center%20an%20inline%20element,is%20text%2Dalign%3A%20center%20.&text=For%20multiple%20inline%20elements%2C%20the,using%20text%2Dalign%3A%20center%20.*/
+/*Opfrismiddel flexbox -> https://ishadeed.com/article/learn-css-centering/#:~:text=To%20center%20an%20inline%20element,is%20text%2Dalign%3A%20center%20.&text=For%20multiple%20inline%20elements%2C%20the,using%20text%2Dalign%3A%20center%20.*/
 h1{
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -70,9 +71,34 @@ h1{
 span:nth-of-type(5){
 	animation-name: letterB;
 	animation-duration: 5s;
+	position: relative;
 }
 
-/*hulpmiddel met scaleX -> https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
+span:nth-of-type(5)::before{
+	content: "";
+	width: 0.25em;
+	height: 0.25em;
+	background-color: purple;
+	position: absolute;
+	border-radius: 155% 0 155% 120%;
+	bottom: -13%;
+	left: 0%;
+	transform: rotate(-45deg);
+}
+
+span:nth-of-type(5)::after{
+	content: "";
+	width: 0.25em;
+	height: 0.25em;
+	background-color: pink;
+	position: absolute;
+	border-radius: 155% 0 155% 120%;
+	bottom: -13%;
+	left: 50%;
+	transform: rotate(-45deg);
+}
+
+/*Hulpmiddel met scaleX -> https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
 @keyframes letterB{
   0%{
     transform: scaleX(1);
@@ -98,4 +124,7 @@ span:nth-of-type(5){
 		transform: scaleX(0.1);
   }
 }
+
+/*Hulpmiddel koffie? -> https://www.youtube.com/watch?v=4p1EL-OVwUQ*/
+
 
