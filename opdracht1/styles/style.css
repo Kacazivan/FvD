@@ -71,31 +71,88 @@ h1{
 span:nth-of-type(5){
 	animation-name: letterB;
 	animation-duration: 5s;
+}
+
+span:nth-of-type(6){
 	position: relative;
 }
 
-span:nth-of-type(5)::before{
+span:nth-of-type(6)::before{
 	content: "";
-	width: 0.25em;
-	height: 0.25em;
-	background-color: purple;
+	width: 0.15em;
+	height: 0.15em;
+	background-color: #4a2c2a;
 	position: absolute;
 	border-radius: 155% 0 155% 120%;
-	bottom: -13%;
-	left: 0%;
+	bottom: -5%;
+	left: -60%;
 	transform: rotate(-45deg);
+	animation: druppelEen 10s;
 }
 
-span:nth-of-type(5)::after{
+span:nth-of-type(6)::after{
 	content: "";
-	width: 0.25em;
-	height: 0.25em;
+	width: 0.15em;
+	height: 0.15em;
 	background-color: pink;
 	position: absolute;
 	border-radius: 155% 0 155% 120%;
-	bottom: -13%;
-	left: 50%;
+	bottom: -5%;
+	left: -60%;
 	transform: rotate(-45deg);
+	animation: druppelTwee 10s;
+}
+
+@keyframes druppelEen{
+	0%{
+		opacity: 0;
+	}
+
+	15%{
+		opacity: 1;
+	}
+
+	50%{
+		transform: translateY(1em);
+	}
+
+	60%{
+		transform: translateY(1em);
+	}
+
+	65%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}
+
+@keyframes druppelTwee{
+	0%{
+		opacity: 0;
+	}
+
+	15%{
+		opacity: 1;
+	}
+
+	50%{
+		transform: translateY(1em);
+	}
+
+	60%{
+		transform: translateY(1em);
+	}
+
+	65%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 0;
+	}
 }
 
 /*Hulpmiddel met scaleX -> https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
@@ -125,6 +182,11 @@ span:nth-of-type(5)::after{
   }
 }
 
+/*Hulpmiddel fade-in en fade-out: https://www.youtube.com/watch?v=UInN6O_nMKs*/
+
+
 /*Hulpmiddel koffie? -> https://www.youtube.com/watch?v=4p1EL-OVwUQ*/
+
+/*Hulpmiddel dark & light mode: https://www.youtube.com/watch?v=nQzRTsjBXfQ*/
 
 
