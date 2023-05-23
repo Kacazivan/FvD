@@ -38,6 +38,8 @@ button:not(:disabled), summary {
 	--house-green: #1e3932;
 	--light-green: #d4e8e2;
 	--starbucks-green: #036142;
+	--koffieKleur: #4a2c2a;
+	--light-brown: #C4A484;
 }
 
 
@@ -79,7 +81,7 @@ span{
 /***************/
 
 h1:hover span:nth-of-type(5){
-	animation-name: letterB;
+	animation-name: letterBanimatie;
 	animation-duration: 5s;
 	animation-fill-mode: forwards; /*-> https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode*/
 }
@@ -92,7 +94,7 @@ h1:hover span:nth-of-type(6)::before{
 	content: "";
 	width: 0.15em;
 	height: 0.15em;
-	background-color: #4a2c2a;
+	background-color: var(--koffieKleur);
 	position: absolute;
 	border-radius: 155% 0 155% 120%;
 	bottom: -5%;
@@ -106,7 +108,7 @@ h1:hover span:nth-of-type(6)::after{
 	content: "";
 	width: 0.15em;
 	height: 0.15em;
-	background-color: #4a2c2a;
+	background-color: var(--koffieKleur);
 	position: absolute;
 	border-radius: 155% 0 155% 120%;
 	bottom: -5%;
@@ -117,6 +119,39 @@ h1:hover span:nth-of-type(6)::after{
 	animation-delay: 2s;
 	opacity: 0;
 }
+
+
+/***********************/
+/***Letter B animatie***/
+/***********************/
+
+/*Hulpmiddel met scaleX -> https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
+@keyframes letterBanimatie{
+  0%{
+    transform: scaleX(1);
+  }
+
+  20%{
+    transform: scaleX(0.6);
+  }
+  
+  40%{
+    transform: scaleX(0.6);
+  }
+
+	60%{
+    transform: scaleX(0.4);
+	}
+
+	80%{
+    transform: scaleX(0.2);
+	}
+
+  100%{
+		transform: scaleX(0.1);
+  }
+}
+
 
 
 /******************************/
@@ -177,37 +212,40 @@ h1:hover span:nth-of-type(6)::after{
 }
 
 
-/***********************/
-/***Letter B animatie***/
-/***********************/
+/********************/
+/***Koffie vulling***/
+/********************/
 
-/*Hulpmiddel met scaleX -> https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
-@keyframes letterB{
-  0%{
-    transform: scaleX(1);
-  }
-
-  20%{
-    transform: scaleX(0.6);
-  }
-  
-  40%{
-    transform: scaleX(0.6);
-  }
-
-	60%{
-    transform: scaleX(0.4);
-	}
-
-	80%{
-    transform: scaleX(0.2);
-	}
-
-  100%{
-		transform: scaleX(0.1);
-  }
+/*body:hover{
+  position: relative;
 }
 
+body:hover::after{
+  content: "";
+  position: absolute;
+  width: 200vw;
+  height: 200vw;
+  background: pink;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  top: 100vh;
+  animation: koffieFill 5s ease-in;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  border-radius: 35%;
+}
+
+@keyframes koffieFill{
+  from{
+    top: 100vh;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to{
+    top: -4rem;
+    transform: translateX(-50%) rotate(360deg);
+  }
+}*/
 
 /******************/
 /***koffie beker***/
@@ -224,7 +262,7 @@ span:nth-of-type(4)::before{
 	border: 2px solid black;
 	width: 1em;
 	height: 0.55em;
-	z-index: 1; /* -> volgorde laag*/
+	z-index: 2; 
 	position: absolute;
 	border-radius: 0% 2% 36% 38% / 0% 0% 97% 100%;
 	top: 1.75em;
@@ -243,8 +281,149 @@ span:nth-of-type(4)::after{
   left: 1.65em;
 }
 
+/*******************/
+/***Koffie golven***/
+/*******************/
 
+/*span:nth-of-type(3){
+	position: relative;
+	overflow: hidden;
+}
+
+span:nth-of-type(3)::before{
+	content: "";
+	background-color: transparent;
+	border: 0.5px solid black;
+	width: 1em;
+	height: 0.55em;
+	z-index: -1; 
+	position: absolute;
+	border-radius: 0% 2% 36% 38% / 0% 0% 97% 100%;
+	top: 1.75em;
+	left: 1.8em;
+}
+
+span:nth-of-type(3)::after{
+	content: "";
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	background: green;
+	z-index: -2;
+	animation: koffieGolf 5s ease-in;
+	animation-fill-mode: forwards;
+	border-radius: 35%;
+	top: 2.3em;
+	left: 2.3em;
+}
+
+@keyframes koffieGolf{
+	from{
+		top: 2.3em;
+		transform: translateX(-50%) rotate(0deg);
+	}
+	to{
+		top: 2.1em;
+		transform: translateX(-50%) rotate(180deg);
+	}
+}*/
+
+
+/*Hulpmiddel -> https://www.youtube.com/watch?v=wGPDuqgkoew*/
+/*span:nth-of-type(3){
+	position: relative;
+}
+
+span:nth-of-type(3)::before{
+	content: "";
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	background: green;
+	z-index: -1;
+	animation: koffieGolf 5s ease-in;
+	animation-fill-mode: forwards;
+	border-radius: 35%;
+	top: 2.3em;
+	left: 2.3em;
+}
+
+@keyframes koffieGolf{
+	from{
+		top: 2.3em;
+		transform: translateX(-50%) rotate(0deg);
+	}
+	to{
+		top: 2.1em;
+		transform: translateX(-50%) rotate(180deg);
+	}
+}*/
+
+
+/********************/
+/***Stoom animatie***/
+/********************/
+
+/*span:nth-of-type(2){
+	position: relative;
+}
+
+span:nth-of-type(2)::before{
+	content: "";
+	position: absolute;
+	width: 0.3em;
+	height: 0.3em;
+	background: peru;
+	border-radius: 50%;
+	top: 1.3em;
+	left: 3em;
+	z-index: 0;
+	animation-name: stoom;
+}
+
+@keyframes stoom{
+	0%{
+		transform: translateY(0) translateX(0) scale(0.25);
+		opacity: 0.25;
+	}
+	100%{
+		transform: translateY(-1em) translateX(-0.5em) scale(0.25);
+		opacity: 0;
+	}
+}*/
+
+
+/***********************/
+/***Light & Dark mode***/
+/***********************/
 
 /*Hulpmiddel dark & light mode: https://www.youtube.com/watch?v=nQzRTsjBXfQ*/
+@media (prefers-color-scheme:dark){
+	body{
+		background-color: var(--house-green);
+	}
+
+	span{
+		color: var(--color-background);
+	}
+
+	h1:hover span:nth-of-type(6)::before{
+		background-color: var(--light-brown);
+	}
+
+	h1:hover span:nth-of-type(6)::after{
+		background-color: var(--light-brown);
+	}
+
+	span:nth-of-type(4)::before{
+		border: 2px solid var(--color-background);
+	}
+
+	span:nth-of-type(4)::after{
+		border: 2px solid var(--color-background);
+	}
+
+}
+
 
 
