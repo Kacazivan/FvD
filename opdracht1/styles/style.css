@@ -47,10 +47,16 @@ button:not(:disabled), summary {
 /****************/
 /* JOUW STYLING */
 /****************/
+
+/*Opfrismiddel flexbox -> https://ishadeed.com/article/learn-css-centering/#:~:text=To%20center%20an%20inline%20element,is%20text%2Dalign%3A%20center%20.&text=For%20multiple%20inline%20elements%2C%20the,using%20text%2Dalign%3A%20center%20.*/
 body {
   font-family:'SoDoSans-Regular', sans-serif;
   color:var(--color-text);
   background-color:var(--color-background);
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 
@@ -60,24 +66,29 @@ span{
 	color: var(--house-green);
 }
 
-/*Opfrismiddel flexbox -> https://ishadeed.com/article/learn-css-centering/#:~:text=To%20center%20an%20inline%20element,is%20text%2Dalign%3A%20center%20.&text=For%20multiple%20inline%20elements%2C%20the,using%20text%2Dalign%3A%20center%20.*/
-h1{
+/*h1{
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
+}*/
 
-span:nth-of-type(5){
+
+/***************/
+/***Letter B***/
+/***************/
+
+h1:hover span:nth-of-type(5){
 	animation-name: letterB;
 	animation-duration: 5s;
+	animation-fill-mode: forwards; /*-> https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode*/
 }
 
-span:nth-of-type(6){
+h1:hover span:nth-of-type(6){
 	position: relative;
 }
 
-span:nth-of-type(6)::before{
+h1:hover span:nth-of-type(6)::before{
 	content: "";
 	width: 0.15em;
 	height: 0.15em;
@@ -85,24 +96,34 @@ span:nth-of-type(6)::before{
 	position: absolute;
 	border-radius: 155% 0 155% 120%;
 	bottom: -5%;
-	left: -60%;
+	left: -110%;
 	transform: rotate(-45deg);
 	animation: druppelEen 10s;
+	animation-fill-mode: forwards; 
 }
 
-span:nth-of-type(6)::after{
+h1:hover span:nth-of-type(6)::after{
 	content: "";
 	width: 0.15em;
 	height: 0.15em;
-	background-color: pink;
+	background-color: #4a2c2a;
 	position: absolute;
 	border-radius: 155% 0 155% 120%;
 	bottom: -5%;
-	left: -60%;
+	left: -80%;
 	transform: rotate(-45deg);
 	animation: druppelTwee 10s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+	opacity: 0;
 }
 
+
+/******************************/
+/***Koffie druppels animatie***/
+/******************************/
+
+/*Hulpmiddel fade-in en fade-out: https://www.youtube.com/watch?v=UInN6O_nMKs*/
 @keyframes druppelEen{
 	0%{
 		opacity: 0;
@@ -155,6 +176,11 @@ span:nth-of-type(6)::after{
 	}
 }
 
+
+/***********************/
+/***Letter B animatie***/
+/***********************/
+
 /*Hulpmiddel met scaleX -> https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
 @keyframes letterB{
   0%{
@@ -182,10 +208,42 @@ span:nth-of-type(6)::after{
   }
 }
 
-/*Hulpmiddel fade-in en fade-out: https://www.youtube.com/watch?v=UInN6O_nMKs*/
+
+/******************/
+/***koffie beker***/
+/******************/
+
+/*Eefje heeft me hier enorm mee geholpen*/
+span:nth-of-type(4){
+	position: relative;
+}
+
+span:nth-of-type(4)::before{
+	content: "";
+	background-color: rgba(206, 209, 211, 0.24);
+	border: 2px solid black;
+	width: 1em;
+	height: 0.55em;
+	z-index: 1; /* -> volgorde laag*/
+	position: absolute;
+	border-radius: 0% 2% 36% 38% / 0% 0% 97% 100%;
+	top: 1.75em;
+	left: 0.8em;
+}
+
+span:nth-of-type(4)::after{
+	content: "";
+  width: 0.3em;
+  height: 0.3em;
+  position: absolute;
+  border-radius: 64% 36% 100% 0% / 100% 34% 66% 0%;
+  border: 2px solid black;
+  background-color: transparent;
+  top: 1.85em;
+  left: 1.65em;
+}
 
 
-/*Hulpmiddel koffie? -> https://www.youtube.com/watch?v=4p1EL-OVwUQ*/
 
 /*Hulpmiddel dark & light mode: https://www.youtube.com/watch?v=nQzRTsjBXfQ*/
 
