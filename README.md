@@ -53,13 +53,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  De Dark and light mode ging erg goed bij mij, ik begreep het ook erg snel. Ik vond het ook erg leuk
+  om hiermee met kleuren te spelen.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Het is me niet gelukt om een automaat en stoom te maken zonder een div/svg/img, omdat het te moeilijk
+  voor me werd. Dit vond ik eigenlijk ook best pittig om te maken, omdat ik heel vaak vastliep bij bepaalde punten. 
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>

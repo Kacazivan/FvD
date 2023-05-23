@@ -68,18 +68,14 @@ span{
 	color: var(--house-green);
 }
 
-/*h1{
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}*/
-
+h1{
+	font-size: clamp(40px, 8vw, 100px); /*clamp= https://www.youtube.com/watch?v=erqRw3E-vn4*/
+	cursor: pointer;
+}
 
 /***************/
 /***Letter B***/
 /***************/
-
 h1:hover span:nth-of-type(5){
 	animation-name: letterBanimatie;
 	animation-duration: 5s;
@@ -115,6 +111,7 @@ h1:hover span:nth-of-type(6)::after{
 	left: -80%;
 	transform: rotate(-45deg);
 	animation: druppelTwee 10s;
+	animation-iteration-count: 5;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
 	opacity: 0;
@@ -128,27 +125,27 @@ h1:hover span:nth-of-type(6)::after{
 /*Hulpmiddel met scaleX -> https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX*/
 @keyframes letterBanimatie{
   0%{
-    transform: scaleX(1);
+    transform: scaleY(1);
   }
 
   20%{
-    transform: scaleX(0.6);
+    transform: scaleY(0.6);
   }
   
   40%{
-    transform: scaleX(0.6);
+    transform: scaleY(0.6);
   }
 
 	60%{
-    transform: scaleX(0.4);
+    transform: scaleY(0.4);
 	}
 
 	80%{
-    transform: scaleX(0.2);
+    transform: scaleY(0.2);
 	}
 
   100%{
-		transform: scaleX(0.1);
+		transform: scaleY(0.1);
   }
 }
 
@@ -212,41 +209,6 @@ h1:hover span:nth-of-type(6)::after{
 }
 
 
-/********************/
-/***Koffie vulling***/
-/********************/
-
-/*body:hover{
-  position: relative;
-}
-
-body:hover::after{
-  content: "";
-  position: absolute;
-  width: 200vw;
-  height: 200vw;
-  background: pink;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  top: 100vh;
-  animation: koffieFill 5s ease-in;
-  animation-delay: 5s;
-  animation-fill-mode: forwards;
-  border-radius: 35%;
-}
-
-@keyframes koffieFill{
-  from{
-    top: 100vh;
-    transform: translateX(-50%) rotate(0deg);
-  }
-  to{
-    top: -4rem;
-    transform: translateX(-50%) rotate(360deg);
-  }
-}*/
-
 /******************/
 /***koffie beker***/
 /******************/
@@ -281,116 +243,45 @@ span:nth-of-type(4)::after{
   left: 1.65em;
 }
 
-/*******************/
-/***Koffie golven***/
-/*******************/
 
-/*span:nth-of-type(3){
-	position: relative;
+/********************/
+/***Koffie vulling***/
+/********************/
+
+/*Hulpmiddel -> https://www.youtube.com/watch?v=wGPDuqgkoew*/
+body:hover{
+  position: relative;
 	overflow: hidden;
 }
 
-span:nth-of-type(3)::before{
-	content: "";
-	background-color: transparent;
-	border: 0.5px solid black;
-	width: 1em;
-	height: 0.55em;
-	z-index: -1; 
-	position: absolute;
-	border-radius: 0% 2% 36% 38% / 0% 0% 97% 100%;
-	top: 1.75em;
-	left: 1.8em;
+body:hover::before{
+  content:"";
+  position:absolute;
+  width:200vw;
+  height:200vw;
+  background:var(--light-brown);
+  left:50%;
+  transform:translateX(-50%);
+  border-radius:35%;
+  animation:koffieFill 5s ease-in forwards;
+  z-index:-1;
+	margin-top: -1em;
+	animation-delay: 5s;
+	opacity: 0;
 }
 
-span:nth-of-type(3)::after{
-	content: "";
-	position: absolute;
-	width: 1em;
-	height: 1em;
-	background: green;
-	z-index: -2;
-	animation: koffieGolf 5s ease-in;
-	animation-fill-mode: forwards;
-	border-radius: 35%;
-	top: 2.3em;
-	left: 2.3em;
+@keyframes koffieFill {
+  from {
+		opacity: 1;
+    top:60em;
+    transform:translateX(-50%) rotate(0deg);
+  }
+  to {
+		opacity: 1;
+    top:-2em;
+    transform:translateX(-50%) rotate(360deg);
+  }
 }
-
-@keyframes koffieGolf{
-	from{
-		top: 2.3em;
-		transform: translateX(-50%) rotate(0deg);
-	}
-	to{
-		top: 2.1em;
-		transform: translateX(-50%) rotate(180deg);
-	}
-}*/
-
-
-/*Hulpmiddel -> https://www.youtube.com/watch?v=wGPDuqgkoew*/
-/*span:nth-of-type(3){
-	position: relative;
-}
-
-span:nth-of-type(3)::before{
-	content: "";
-	position: absolute;
-	width: 1em;
-	height: 1em;
-	background: green;
-	z-index: -1;
-	animation: koffieGolf 5s ease-in;
-	animation-fill-mode: forwards;
-	border-radius: 35%;
-	top: 2.3em;
-	left: 2.3em;
-}
-
-@keyframes koffieGolf{
-	from{
-		top: 2.3em;
-		transform: translateX(-50%) rotate(0deg);
-	}
-	to{
-		top: 2.1em;
-		transform: translateX(-50%) rotate(180deg);
-	}
-}*/
-
-
-/********************/
-/***Stoom animatie***/
-/********************/
-
-/*span:nth-of-type(2){
-	position: relative;
-}
-
-span:nth-of-type(2)::before{
-	content: "";
-	position: absolute;
-	width: 0.3em;
-	height: 0.3em;
-	background: peru;
-	border-radius: 50%;
-	top: 1.3em;
-	left: 3em;
-	z-index: 0;
-	animation-name: stoom;
-}
-
-@keyframes stoom{
-	0%{
-		transform: translateY(0) translateX(0) scale(0.25);
-		opacity: 0.25;
-	}
-	100%{
-		transform: translateY(-1em) translateX(-0.5em) scale(0.25);
-		opacity: 0;
-	}
-}*/
 
 
 /***********************/
@@ -422,7 +313,6 @@ span:nth-of-type(2)::before{
 	span:nth-of-type(4)::after{
 		border: 2px solid var(--color-background);
 	}
-
 }
 
 
