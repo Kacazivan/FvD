@@ -14,9 +14,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. https://ishadeed.com/article/learn-css-centering/#:~:text=To%20center%20an%20inline%20element,is%20text%2Dalign%3A%20center%20.&text=For%20multiple%20inline%20elements%2C%20the,using%20text%2Dalign%3A%20center%20. 
-  2. https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scaleX 
-  3. -...-
+  1. Flexbox = https://ishadeed.com/article/learn-css-centering/#:~:text=To%20center%20an%20inline%20element,is%20text%2Dalign%3A%20center%20.&text=For%20multiple%20inline%20elements%2C%20the,using%20text%2Dalign%3A%20center%20. 
+  2. clamp = https://www.youtube.com/watch?v=erqRw3E-vn4 
+  3. Light and Dark mode = https://www.youtube.com/watch?v=nQzRTsjBXfQ
+  4. Animation-fill-mode = https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode 
+  5. Scale = https://www.youtube.com/watch?v=L4RYwQM_Wvk
+  6. Fade-in & Fade-out = https://www.youtube.com/watch?v=UInN6O_nMKs 
+  7. Koffie vulling = https://www.youtube.com/watch?v=wGPDuqgkoew 
+  8. Dark and Light mode = https://www.youtube.com/watch?v=nQzRTsjBXfQ 
 
 
 
@@ -49,21 +54,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/website_1.png" width="375px" alt="uitomst afbeelding 1 opdracht 1">
+  <img src="readme-images/website_2.png" width="375px" alt="uitomst afbeelding 2 opdracht 1">
+  <img src="readme-images/website_3.png" width="375px" alt="uitomst afbeelding 3 opdracht 1">
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
   De Dark and light mode ging erg goed bij mij, ik begreep het ook erg snel. Ik vond het ook erg leuk
   om hiermee met kleuren te spelen.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/lightmode.png" width="375px" alt="light mode desktop">
+  <img src="readme-images/darkmode.png" width="375px" alt="dark mode desktop">
 
 
   ### Dit was lastig/Is niet gelukt:
   Het is me niet gelukt om een automaat en stoom te maken zonder een div/svg/img, omdat het te moeilijk
-  voor me werd. Dit vond ik eigenlijk ook best pittig om te maken, omdat ik heel vaak vastliep bij bepaalde punten. 
+  voor me werd. Dit vond ik eigenlijk ook best pittig om te maken, omdat ik heel vaak vastliep bij bepaalde punten. Daarnaast lukt me het niet om de koffiegolf op mobielformaat groter te maken. Op mobielformaat bleef er namelijk nog een stukje witruimte over. Ook doet mijn letter B animatie het niet meer, terwijl hij het eerst wel deed. Eefje en ik konden beiden het probleem niet vinden. Wat ik echt jammer vind, want dat maakte deze wesbite eigenlijk compleet. 
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  <img src="readme-images/witruimteGolf.png" width="375px" alt="witruimte golf afbeelding">
 </details>
 
 
