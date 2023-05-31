@@ -14,8 +14,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. [Flexbox] (https://ishadeed.com/article/learn-css-centering/#:~:text=To%20center%20an%20inline%20element,is%20text%2Dalign%3A%20center%20.&text=For%20multiple%20inline%20elements%2C%20the,using%20text%2Dalign%3A%20center%20 "Flexbox")
-  2. clamp = https://www.youtube.com/watch?v=erqRw3E-vn4 
+  1. Flexbox = https://ishadeed.com/article/learn-css-centering/#:~:text=To%20center%20an%20inline%20element,is%20text%2Dalign%3A%20center%20.&text=For%20multiple%20inline%20elements%2C%20the,using%20text%2Dalign%3A%20center%20. 
+  2. Clamp = https://www.youtube.com/watch?v=erqRw3E-vn4 
   3. Light and Dark mode = https://www.youtube.com/watch?v=nQzRTsjBXfQ
   4. Animation-fill-mode = https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode 
   5. Scale = https://www.youtube.com/watch?v=L4RYwQM_Wvk
@@ -31,11 +31,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na schetsen idee (voor week 2)</summary>
 
 
-  ### Je storyboard: *separate paragraph*
+  ### Je storyboard: 
+
+
   <img src="readme-images/Storyboard_Starbucks.png" width="375px" alt="storyboard voor opdracht 1">
 
 
-  ### Je ambitie: *separate paragraph*
+  ### Je ambitie: 
+  
+
   Aan deze technieken/punten wil ik werken:
   - Effecten als stoom leren coderen.
   - Een koffie automaat coderen m.b.v. svgtjes?
@@ -56,7 +60,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Je uitkomst - karakteristiek screenshot(s):
   <img src="readme-images/website_1.png" width="375px" alt="uitomst afbeelding 1 opdracht 1"> 
 
-  Wanneer je de hoofdpagina bezoekt, wordt de tekst 'Starbucks' weergegeven met een beker. De kleuren die je op dat moment ziet, zijn afhankelijk van je voorkeuren. Als je de lichte modus hebt ingeschakeld, worden er lichtere kleuren getoond. En als je de donkere modus aan hebt staan, krijg je wat donkerdere kleuren te zien. Dit heb ik gedaan door de roots aan te passen met behulp van '@media (prefers-color-scheme: dark)'. Het stukje code voor dit gedeelte zag er als volgt uit: *separate paragraph*
+  Wanneer je de hoofdpagina bezoekt, wordt de tekst 'Starbucks' weergegeven met een beker. De kleuren die je op dat moment ziet, zijn afhankelijk van je voorkeuren. Als je de lichte modus hebt ingeschakeld, worden er lichtere kleuren getoond. En als je de donkere modus aan hebt staan, krijg je wat donkerdere kleuren te zien. Dit heb ik gedaan door de roots aan te passen met behulp van '@media (prefers-color-scheme: dark)'. Het stukje code voor dit gedeelte zag er als volgt uit: 
+  
+
 
     :root {
       --letter-color:var(--starbucks-light-green);
@@ -72,7 +78,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   <img src="readme-images/website_2.png" width="375px" alt="uitomst afbeelding 2 opdracht 1">
 
-  Wanneer je over de H1 hovert, wordt er een animatie afgespeeld waarbij de letter B wordt platgedrukt, waardoor er koffiedruppels vrijkomen die in de koffiebeker vallen. Deze animaties zijn gemaakt met behulp van keyframes. Door gebruik te maken van "transform: scaleY" kon ik de lengte van de letter B aanpassen, zodat het lijkt alsof deze wordt platgedrukt. Met "opacity" en "transform: translateY" kon ik de koffiedruppels geleidelijk zichtbaar maken en laten vallen naar het bekertje. Hieronder zie bevindt zich de keyframe voor de animatie van de letter B: *separate paragraph*
+  Wanneer je over de H1 hovert, wordt er een animatie afgespeeld waarbij de letter B wordt platgedrukt, waardoor er koffiedruppels vrijkomen die in de koffiebeker vallen. Deze animaties zijn gemaakt met behulp van keyframes. Door gebruik te maken van "transform: scaleY" kon ik de lengte van de letter B aanpassen, zodat het lijkt alsof deze wordt platgedrukt. Met "opacity" en "transform: translateY" kon ik de koffiedruppels geleidelijk zichtbaar maken en laten vallen naar het bekertje. Hieronder zie bevindt zich de keyframe voor de animatie van de letter B: 
+  
+
 
     @keyframes letterBanimatie{
       0%{
