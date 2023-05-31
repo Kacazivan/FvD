@@ -116,11 +116,47 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  De Dark and light mode ging erg goed bij mij, ik begreep het ook erg snel. Ik vond het ook erg leuk
-  om hiermee met kleuren te spelen.
-
   <img src="readme-images/lightmode.png" width="375px" alt="light mode desktop">
   <img src="readme-images/darkmode.png" width="375px" alt="dark mode desktop">
+
+  In het begin dacht ik dat ik dark en light mode goed had begrepen, maar ik had het helaas verkeerd gedaan.
+  Gelukkig kon ik tijdens de volgende les alles snel oplossen met wat uitleg. Ik wist bijvoorbeeld niet dat ik alleen de "roots" hoef te veranderen in de '@media (prefers-color-scheme: dark)'. Hoe dan ook, ik vond het leuk en interessant om met deze functie te oefenen en te spelen met kleuren. Om een beter overzicht te krijgen van de kleuren, heb ik een kleurenpalet gemaakt, waardoor ik makkelijker de kleuren kan toepassen op bepaalde elementen:
+
+
+    :root {
+      /*kleurpalet*/
+      --starbucks-house-green: #1e3932;
+      --starbucks-light-green: #d4e8e2;
+      --starbucks-green: #036142;
+
+      --koffie-donker-bruin: #4a2c2a;
+      --ijskoffie-licht-bruin: #C4A484;
+
+      --light-mode-coffeeFill:#e7dfc5;
+      --dark-mode-coffeeFill: #335c50;
+
+      --color-text:#111;
+      --lightMode-color-background:#f2f0ea;
+
+      --lightMode-koffieBeker-border: #111;
+      --darkMode-koffieBeker-border: #f2f0ea;
+
+      --darkmode-color-text: #f2f0ea;
+
+
+
+      /*LightMode*/
+      --letter-color:var(--starbucks-house-green);
+      --coffee-color:var(--koffie-donker-bruin);
+
+      --Koffiefill-color:var(--light-mode-coffeeFill);
+      --KoffieDruppel-color: var(--koffie-donker-bruin);
+      --koffie-in-beker: var(--koffie-donker-bruin);
+      --koffie-beker-border: var(--lightMode-koffieBeker-border);
+      --achtergrond-kleur: var(--lightMode-color-background);
+    }
+
+  
 
 
   ### Dit was lastig/Is niet gelukt:
