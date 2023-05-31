@@ -55,24 +55,55 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je uitkomst - karakteristiek screenshot(s):
   <img src="readme-images/website_1.png" width="375px" alt="uitomst afbeelding 1 opdracht 1">
-  Als je op de hoofdpagina komt krijg je de tekst "Starbucks" met een beker te zien. De kleuren die je op dat moment ziet hangt af van je preferences. Dus als je light mode hebt krijg je wat lichtere kleuren te zien en als je dark mode aan hebt staan krijg je wat donkere kleuren te zien. Dit heb ik gedaan door de roots te veranderen met @media (prefers-color-scheme:dark). Mijn stukje code voor dit onderdeel zag er 
-  zo uit:
 
-  :root {
-		--letter-color:var(--starbucks-light-green);
-    --coffee-color:var(--ijskoffie-licht-bruin);
-    --Koffiefill-color:var(--dark-mode-coffeeFill);
-    --KoffieDruppel-color: var(--ijskoffie-licht-bruin);
-    --koffie-in-beker: var(--ijskoffie-licht-bruin);
-    --koffie-beker-border: var(--darkMode-koffieBeker-border);
-    --achtergrond-kleur: var(--starbucks-house-green);
-    --letter-color:var(--darkmode-color-text);
-  }
+    Wanneer je de hoofdpagina bezoekt, wordt de tekst 'Starbucks' weergegeven met een beker. De kleuren die je op dat moment ziet, zijn afhankelijk van je voorkeuren. Als je de lichte modus hebt ingeschakeld, worden er lichtere kleuren getoond. En als je de donkere modus aan hebt staan, krijg je wat donkerdere kleuren te zien. Dit heb ik gedaan door de roots aan te passen met behulp van '@media (prefers-color-scheme: dark)'. Het stukje code voor dit gedeelte zag er als volgt uit:
+
+    :root {
+      --letter-color:var(--starbucks-light-green);
+      --coffee-color:var(--ijskoffie-licht-bruin);
+      --Koffiefill-color:var(--dark-mode-coffeeFill);
+      --KoffieDruppel-color: var(--ijskoffie-licht-bruin);
+      --koffie-in-beker: var(--ijskoffie-licht-bruin);
+      --koffie-beker-border: var(--darkMode-koffieBeker-border);
+      --achtergrond-kleur: var(--starbucks-house-green);
+      --letter-color:var(--darkmode-color-text);
+    }
 
 
   <img src="readme-images/website_2.png" width="375px" alt="uitomst afbeelding 2 opdracht 1">
-  
+
+    Wanneer je over de H1 hovert, wordt er een animatie afgespeeld waarbij de letter B wordt platgedrukt, waardoor er koffiedruppels vrijkomen die in de koffiebeker vallen. Deze animaties zijn gemaakt met behulp van keyframes. Door gebruik te maken van "transform: scaleY" kon ik de lengte van de letter B aanpassen, zodat het lijkt alsof deze wordt platgedrukt. Met "opacity" en "transform: translateY" kon ik de koffiedruppels geleidelijk zichtbaar maken en laten vallen naar het bekertje. Hieronder zie bevindt zich de keyframe voor de animatie van de letter B:
+
+    @keyframes letterBanimatie{
+      0%{
+        transform: scaleY(1);
+      }
+
+      20%{
+        transform: scaleY(0.6);
+      }
+      
+      40%{
+        transform: scaleY(0.6);
+      }
+
+      60%{
+        transform: scaleY(0.4);
+      }
+
+      80%{
+        transform: scaleY(0.2);
+      }
+
+      100%{
+        transform: scaleY(0.1);
+      }
+    }
+
+
   <img src="readme-images/website_3.png" width="375px" alt="uitomst afbeelding 3 opdracht 1">
+
+    Na een aantal seconden lijkt het alsof een vloeibare substantie het scherm overneemt. Ook deze animatie is gemaakt met behulp van een keyframe. Door gebruik te maken van "z-index: -1;", zorg ik ervoor dat de vloeistof zich achter de tekst en de beker bevindt, waardoor het alleen op de achtergrond plaatsvindt. 
 
 
 
