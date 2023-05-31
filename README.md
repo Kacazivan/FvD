@@ -54,22 +54,24 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/website_1.png" width="375px" alt="uitomst afbeelding 1 opdracht 1">\
-    Als je op de hoofdpagina komt krijg je de tekst "Starbucks" met een beker te zien. De kleuren die je op\ dat moment ziet hangt af van je preferences. Dus als je light mode hebt krijg je wat lichtere kleuren te\ zien en als je dark mode aan hebt staan krijg je wat donkere kleuren te zien. Dit heb ik gedaan door de\ roots te veranderen met @media (prefers-color-scheme:dark). Mijn stukje code voor dit onderdeel zag er 
-    zo uit:\
+  <img src="readme-images/website_1.png" width="375px" alt="uitomst afbeelding 1 opdracht 1">
+  Als je op de hoofdpagina komt krijg je de tekst "Starbucks" met een beker te zien. De kleuren die je op dat moment ziet hangt af van je preferences. Dus als je light mode hebt krijg je wat lichtere kleuren te zien en als je dark mode aan hebt staan krijg je wat donkere kleuren te zien. Dit heb ik gedaan door de roots te veranderen met @media (prefers-color-scheme:dark). Mijn stukje code voor dit onderdeel zag er 
+  zo uit:
 
-    :root {
-		  --letter-color:var(--starbucks-light-green);
-		  --coffee-color:var(--ijskoffie-licht-bruin);
-		  --Koffiefill-color:var(--dark-mode-coffeeFill);
-	    --KoffieDruppel-color: var(--ijskoffie-licht-bruin);
-		  --koffie-in-beker: var(--ijskoffie-licht-bruin);
-		  --koffie-beker-border: var(--darkMode-koffieBeker-border);
-		  --achtergrond-kleur: var(--starbucks-house-green);
-		  --letter-color:var(--darkmode-color-text);
-	  }
+  :root {
+		--letter-color:var(--starbucks-light-green);
+    --coffee-color:var(--ijskoffie-licht-bruin);
+    --Koffiefill-color:var(--dark-mode-coffeeFill);
+    --KoffieDruppel-color: var(--ijskoffie-licht-bruin);
+    --koffie-in-beker: var(--ijskoffie-licht-bruin);
+    --koffie-beker-border: var(--darkMode-koffieBeker-border);
+    --achtergrond-kleur: var(--starbucks-house-green);
+    --letter-color:var(--darkmode-color-text);
+  }
+
 
   <img src="readme-images/website_2.png" width="375px" alt="uitomst afbeelding 2 opdracht 1">
+  
   <img src="readme-images/website_3.png" width="375px" alt="uitomst afbeelding 3 opdracht 1">
 
 
