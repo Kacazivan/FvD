@@ -1,5 +1,5 @@
 # Procesverslag
-**Auteur:** -jouw naam-
+**Auteur:** Katarina Živanović
 
 **De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
@@ -31,15 +31,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na schetsen idee (voor week 2)</summary>
 
 
-  ### Je storyboard:
+  ### Je storyboard: *separate paragraph*
   <img src="readme-images/Storyboard_Starbucks.png" width="375px" alt="storyboard voor opdracht 1">
 
 
-  ### Je ambitie: 
+  ### Je ambitie: *separate paragraph*
   Aan deze technieken/punten wil ik werken:
   - Effecten als stoom leren coderen.
   - Een koffie automaat coderen m.b.v. svgtjes?
-  - En natuurlijk letters leren animeren, want dat heb ik nog nooit gedaan.
+  - En natuurlijk letters leren animeren, want dat heb ik nog nooit gedaan. *separate paragraph*
 
   Dus het zal zeker een uitdaging zijn :)
  
@@ -54,9 +54,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/website_1.png" width="375px" alt="uitomst afbeelding 1 opdracht 1">
+  <img src="readme-images/website_1.png" width="375px" alt="uitomst afbeelding 1 opdracht 1"> 
 
-  Wanneer je de hoofdpagina bezoekt, wordt de tekst 'Starbucks' weergegeven met een beker. De kleuren die je op dat moment ziet, zijn afhankelijk van je voorkeuren. Als je de lichte modus hebt ingeschakeld, worden er lichtere kleuren getoond. En als je de donkere modus aan hebt staan, krijg je wat donkerdere kleuren te zien. Dit heb ik gedaan door de roots aan te passen met behulp van '@media (prefers-color-scheme: dark)'. Het stukje code voor dit gedeelte zag er als volgt uit:
+  Wanneer je de hoofdpagina bezoekt, wordt de tekst 'Starbucks' weergegeven met een beker. De kleuren die je op dat moment ziet, zijn afhankelijk van je voorkeuren. Als je de lichte modus hebt ingeschakeld, worden er lichtere kleuren getoond. En als je de donkere modus aan hebt staan, krijg je wat donkerdere kleuren te zien. Dit heb ik gedaan door de roots aan te passen met behulp van '@media (prefers-color-scheme: dark)'. Het stukje code voor dit gedeelte zag er als volgt uit: *separate paragraph*
 
     :root {
       --letter-color:var(--starbucks-light-green);
@@ -72,7 +72,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   <img src="readme-images/website_2.png" width="375px" alt="uitomst afbeelding 2 opdracht 1">
 
-  Wanneer je over de H1 hovert, wordt er een animatie afgespeeld waarbij de letter B wordt platgedrukt, waardoor er koffiedruppels vrijkomen die in de koffiebeker vallen. Deze animaties zijn gemaakt met behulp van keyframes. Door gebruik te maken van "transform: scaleY" kon ik de lengte van de letter B aanpassen, zodat het lijkt alsof deze wordt platgedrukt. Met "opacity" en "transform: translateY" kon ik de koffiedruppels geleidelijk zichtbaar maken en laten vallen naar het bekertje. Hieronder zie bevindt zich de keyframe voor de animatie van de letter B:
+  Wanneer je over de H1 hovert, wordt er een animatie afgespeeld waarbij de letter B wordt platgedrukt, waardoor er koffiedruppels vrijkomen die in de koffiebeker vallen. Deze animaties zijn gemaakt met behulp van keyframes. Door gebruik te maken van "transform: scaleY" kon ik de lengte van de letter B aanpassen, zodat het lijkt alsof deze wordt platgedrukt. Met "opacity" en "transform: translateY" kon ik de koffiedruppels geleidelijk zichtbaar maken en laten vallen naar het bekertje. Hieronder zie bevindt zich de keyframe voor de animatie van de letter B: *separate paragraph*
 
     @keyframes letterBanimatie{
       0%{
