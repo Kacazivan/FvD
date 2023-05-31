@@ -26,15 +26,56 @@ button:not(:disabled), summary {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#f2f0ea;
-	--house-green: #1e3932;
-	--light-green: #d4e8e2;
+	/*kleurpalet*/
+	--starbucks-house-green: #1e3932;
+	--starbucks-light-green: #d4e8e2;
 	--starbucks-green: #036142;
-	--koffieKleur: #4a2c2a;
-	--light-brown: #C4A484;
+
+	--koffie-donker-bruin: #4a2c2a;
+	--ijskoffie-licht-bruin: #C4A484;
+
+	--light-mode-coffeeFill:#e7dfc5;
+	--dark-mode-coffeeFill: #335c50;
+
+	--color-text:#111;
+	--lightMode-color-background:#f2f0ea;
+
+	--lightMode-koffieBeker-border: #111;
+	--darkMode-koffieBeker-border: #f2f0ea;
+
+	--darkmode-color-text: #f2f0ea;
+
+
+
+	/*LightMode*/
+	--letter-color:var(--starbucks-house-green);
+	--coffee-color:var(--koffie-donker-bruin);
+
+	--Koffiefill-color:var(--light-mode-coffeeFill);
+	--KoffieDruppel-color: var(--koffie-donker-bruin);
+	--koffie-in-beker: var(--koffie-donker-bruin);
+	--koffie-beker-border: var(--lightMode-koffieBeker-border);
+	--achtergrond-kleur: var(--lightMode-color-background);
 }
+
+
+/***********************/
+/***Light & Dark mode***/
+/***********************/
+@media (prefers-color-scheme:dark){ 
+	:root {
+		--letter-color:var(--starbucks-light-green);
+		--coffee-color:var(--ijskoffie-licht-bruin);
+
+		--Koffiefill-color:var(--dark-mode-coffeeFill);
+		--KoffieDruppel-color: var(--ijskoffie-licht-bruin);
+		--koffie-in-beker: var(--ijskoffie-licht-bruin);
+		--koffie-beker-border: var(--darkMode-koffieBeker-border);
+		--achtergrond-kleur: var(--starbucks-house-green);
+		--letter-color:var(--darkmode-color-text);
+	}
+}
+
 
 
 /****************/
@@ -45,7 +86,7 @@ button:not(:disabled), summary {
 body {
   font-family:'SoDoSans-Regular', sans-serif;
   color:var(--color-text);
-  background-color:var(--color-background);
+  background-color:var(--achtergrond-kleur);
 	display: flex;
   align-items: center;
   justify-content: center;
@@ -56,11 +97,11 @@ body {
 /* jouw code */
 span{
 	font-family: 'SoDoSans-Bold';
-	color: var(--house-green);
+	color: var(--letter-color);
 }
 
 h1{
-	font-size: clamp(40px, 8vw, 100px); /*clamp= https://www.youtube.com/watch?v=erqRw3E-vn4*/
+	font-size: clamp(2.5em, 8vw, 6.25em); /*clamp= https://www.youtube.com/watch?v=erqRw3E-vn4*/
 	cursor: pointer;
 }
 
@@ -68,10 +109,16 @@ h1{
 /***************/
 /***Letter B***/
 /***************/
-span:nth-of-type(5):hover{
+h1:hover span:nth-of-type(5) {
 	animation-name: letterBanimatie;
 	animation-duration: 5s;
 	animation-fill-mode: forwards; /*-> https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode*/
+	display: inline-block;
+
+	/*M.b.v. inline-block kan de animatie van de letter B plaatsvinden op dezelfde regel van de H1. Zonder
+	inline-block, zouden de letters uit elkaar staan, zodat de letter b animatie groter/kleiner kan worden.
+	Dus met inline-block, wordt de animatie in een soort blokje afgespeeld. Zodat het geen andere elementen
+	hindert.*/
 }
 
 h1:hover span:nth-of-type(6){
@@ -82,7 +129,7 @@ h1:hover span:nth-of-type(6)::before{
 	content: "";
 	width: 0.15em;
 	height: 0.15em;
-	background-color: var(--koffieKleur);
+	background-color: var(--KoffieDruppel-color);
 	position: absolute;
 	border-radius: 155% 0 155% 120%;
 	bottom: -5%;
@@ -96,14 +143,13 @@ h1:hover span:nth-of-type(6)::after{
 	content: "";
 	width: 0.15em;
 	height: 0.15em;
-	background-color: var(--koffieKleur);
+	background-color: var(--KoffieDruppel-color);
 	position: absolute;
 	border-radius: 155% 0 155% 120%;
 	bottom: -5%;
 	left: -80%;
 	transform: rotate(-45deg);
 	animation: druppelTwee 10s;
-	animation-iteration-count: 5;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
 	opacity: 0;
@@ -212,8 +258,8 @@ span:nth-of-type(4){
 
 span:nth-of-type(4)::before{
 	content: "";
-	background: linear-gradient(to top, var(--koffieKleur) 50%, transparent 50%);
-	border: 2px solid black;
+	background: linear-gradient(to top, var(--koffie-in-beker) 50%, transparent 50%);
+	border: 0.02em solid var(--koffie-beker-border);
 	width: 1em;
 	height: 0.55em;
 	z-index: 2; 
@@ -229,7 +275,7 @@ span:nth-of-type(4)::after{
   height: 0.3em;
   position: absolute;
   border-radius: 64% 36% 100% 0% / 100% 34% 66% 0%;
-  border: 2px solid black;
+  border: 0.02em solid var(--koffie-beker-border);
   background-color: transparent;
   top: 1.85em;
   left: 1.7em;
@@ -250,14 +296,14 @@ body:hover::before{
   position:absolute;
   width:200vw;
   height:200vw;
-  background: #e7dfc5;
+  background: var(--Koffiefill-color);
   left:50%;
   transform:translateX(-50%);
   border-radius:35%;
   animation:koffieFill 5s ease-in forwards;
   z-index:-1;
 	margin-top: -1em;
-	animation-delay: 5s;
+	animation-delay: 3s;
 	opacity: 0;
 }
 
@@ -274,50 +320,6 @@ body:hover::before{
   }
 }
 
-
-/***********************/
-/***Light & Dark mode***/
-/***********************/
-
-/*Hulpmiddel dark & light mode: https://www.youtube.com/watch?v=nQzRTsjBXfQ*/
-@media (prefers-color-scheme:dark){
-	body{
-		background-color: var(--house-green);
-	}
-
-	span{
-		color: var(--color-background);
-	}
-
-	h1:hover span:nth-of-type(6)::before{
-		background-color: var(--light-brown);
-	}
-
-	h1:hover span:nth-of-type(6)::after{
-		background-color: var(--light-brown);
-	}
-
-	span:nth-of-type(4)::before{
-		border: 2px solid var(--color-background);
-		background: linear-gradient(to top, var(--light-brown) 50%, transparent 50%);
-	}
-
-	span:nth-of-type(4)::after{
-		border: 2px solid var(--color-background);
-	}
-
-	span:nth-of-type(7)::before{
-		border: 2px solid var(--color-background);
-	}
-
-	span:nth-of-type(7)::after{
-		border: 2px solid var(--color-background);
-	}
-
-	body:hover::before{
-		background: #335c50;
-	}
-}
 
 
 
