@@ -40,21 +40,6 @@ input {
 }
 
 :root{
-  /*achtergrond kleuren leidjes -> gebruikte generator: https://mycolor.space/gradient3*/
-  --savaidunav-achtergrondkleur: linear-gradient(to right bottom, #322a28, #342c2d, #342e31, #343035, #333338, #303338, #2d3336, #2b3334, #272f2e, #242c27, #232721, #23231b);
-  --namere-achtergrondkleur: linear-gradient(to right top, #3b5256, #3f565a, #445b5e, #485f63, #4d6467, #4d6468, #4e6568, #4e6569, #4a6266, #465e63, #435b60, #3f585d);
-  --dzanum-achtergrondkleur: linear-gradient(to right top, #614843, #654e4d, #685556, #6a5c5f, #6c6366, #6d6567, #6d6669, #6e686a, #6d6466, #6d6062, #6c5c5d, #6b5858);
-  --level-achtergrondkleur: linear-gradient(to right top, #331718, #2f171a, #2a181c, #26191c, #21191c, #20191c, #20191b, #1f191b, #22191b, #24191a, #271a19, #291a18);
-  --februar-achtergrondkleur: linear-gradient(to right top, #37272a, #36272a, #35282b, #33282b, #32282b, #35292c, #37292d, #3a2a2e, #412b30, #472c31, #4e2e31, #542f31);
-  --dalisi-achtergrondkleur: linear-gradient(to right top, #293335, #252f31, #222c2e, #1e282a, #1b2527, #1a2426, #1a2426, #192325, #1a2427, #1c2628, #1d272a, #1f292c);
-  --zlatnodete-achtergrondkleur: linear-gradient(to right top, #29312a, #2a342a, #2b372a, #2d3a2a, #2f3d29, #323f27, #354024, #394221, #40421b, #474216, #4f4112, #583f0f);
-  --behute-achtergrondkleur: linear-gradient(to right top, #3a201c, #3c201c, #3e1f1c, #3f1f1d, #411e1d, #431f1d, #451f1c, #47201c, #4a221b, #4c241b, #4f271a, #512919);
-  --tiija-achtergrondkleur: linear-gradient(to right top, #1c1d1e, #1c1c1d, #1b1b1c, #1b1b1b, #1a1a1a, #1a1a1a, #191919, #191919, #191919, #191a19, #1a1a1a, #1a1a1a);
-  --grijehje-achtergrondkleur: linear-gradient(to right top, #513a25, #4a3724, #423424, #3c3023, #352d23, #382f24, #3c3024, #3f3225, #4d3a27, #5c4129, #6c492c, #7c502f);
-  --letoje-achtergrondkleur: linear-gradient(to right top, #5b626a, #565c67, #515663, #4e505f, #4b4a5b, #4a4a5d, #4a4a5e, #494a60, #485169, #475971, #446079, #41687f);
-  --moncheri-achtergrondkleur: linear-gradient(to right top, #1b1c1c, #1b1c1c, #1a1b1c, #1a1b1b, #1a1a1b, #1a1a1b, #1a1a1a, #1a1a1a, #1a1a1a, #1b1a1b, #1b1b1b, #1b1b1c);
-  --kolo-achtergrondkleur: linear-gradient(to right top, #1d1d1c, #1d1d1c, #1d1c1c, #1c1c1c, #1c1c1c, #1c1c1c, #1d1d1d, #1d1d1d, #1d1d1d, #1e1e1e, #1e1e1e, #1f1f1f);
-
   --swiper-theme-color:#000;
 }
 
@@ -114,6 +99,7 @@ header {
 
 /********/
 /* MAIN */
+/********/
 main {
   width:100%;
   max-width:22em;
@@ -127,6 +113,7 @@ main {
 
 /************/
 /* de lijst */
+/************/
 ul {
   height:100%;
   margin:0;
@@ -136,6 +123,7 @@ ul {
 
 /****************/
 /* een karakter */
+/****************/
 li { 
   height:100%;
   
@@ -145,7 +133,7 @@ li {
   justify-content:center;
   align-items:center;
   
-  background-image:var(--savaidunav-achtergrondkleur);
+  /*background-image:var(--savaidunav-achtergrondkleur);*/
 }
 
 li h2 {
@@ -166,11 +154,96 @@ li img {
   order:-1;
 }
 
-/*  Stap 4c. */
 .swiper-button-prev,
 .swiper-button-next {
   border:none;
   background:none;
+}
+
+
+/*****************/
+/* achtergronden */
+/*****************/
+
+/*achtergrond kleuren liedjes -> gebruikte generator: https://mycolor.space/gradient3*/
+li:first-of-type{
+  background: linear-gradient(to right bottom, #322a28, #342c2d, #342e31, #343035, #333338, #303338, #2d3336, #2b3334, #272f2e, #242c27, #232721, #23231b);;
+}
+
+li:nth-of-type(2){
+  background: linear-gradient(to right top, #3b5256, #3f565a, #445b5e, #485f63, #4d6467, #4d6468, #4e6568, #4e6569, #4a6266, #465e63, #435b60, #3f585d);;
+}
+
+li:nth-of-type(3){
+  background: linear-gradient(to right top, #614843, #654e4d, #685556, #6a5c5f, #6c6366, #6d6567, #6d6669, #6e686a, #6d6466, #6d6062, #6c5c5d, #6b5858);;
+}
+
+li:nth-of-type(4){
+  background: linear-gradient(to right top, #331718, #2f171a, #2a181c, #26191c, #21191c, #20191c, #20191b, #1f191b, #22191b, #24191a, #271a19, #291a18);
+}
+
+li:nth-of-type(5){
+  background: linear-gradient(to right top, #37272a, #36272a, #35282b, #33282b, #32282b, #35292c, #37292d, #3a2a2e, #412b30, #472c31, #4e2e31, #542f31);;
+}
+
+li:nth-of-type(6){
+  background: linear-gradient(to right top, #293335, #252f31, #222c2e, #1e282a, #1b2527, #1a2426, #1a2426, #192325, #1a2427, #1c2628, #1d272a, #1f292c);;
+}
+
+li:nth-of-type(7){
+  background: linear-gradient(to right top, #29312a, #2a342a, #2b372a, #2d3a2a, #2f3d29, #323f27, #354024, #394221, #40421b, #474216, #4f4112, #583f0f);
+}
+
+li:nth-of-type(8){
+  background: linear-gradient(to right top, #3a201c, #3c201c, #3e1f1c, #3f1f1d, #411e1d, #431f1d, #451f1c, #47201c, #4a221b, #4c241b, #4f271a, #512919);
+}
+
+li:nth-of-type(9){
+  background: linear-gradient(to right top, #1c1d1e, #1c1c1d, #1b1b1c, #1b1b1b, #1a1a1a, #1a1a1a, #191919, #191919, #191919, #191a19, #1a1a1a, #1a1a1a);
+}
+
+li:nth-of-type(10){
+  background: linear-gradient(to right top, #513a25, #4a3724, #423424, #3c3023, #352d23, #382f24, #3c3024, #3f3225, #4d3a27, #5c4129, #6c492c, #7c502f); 
+}
+
+li:nth-of-type(11){
+  background: linear-gradient(to right top, #5b626a, #565c67, #515663, #4e505f, #4b4a5b, #4a4a5d, #4a4a5e, #494a60, #485169, #475971, #446079, #41687f);
+}
+
+li:nth-of-type(12){
+  background: linear-gradient(to right top, #1b1c1c, #1b1c1c, #1a1b1c, #1a1b1b, #1a1a1b, #1a1a1b, #1a1a1a, #1a1a1a, #1a1a1a, #1b1a1b, #1b1b1b, #1b1b1c);
+}
+
+li:nth-of-type(13){
+  background: linear-gradient(to right top, #1d1d1c, #1d1d1c, #1d1c1c, #1c1c1c, #1c1c1c, #1c1c1c, #1d1d1d, #1d1d1d, #1d1d1d, #1e1e1e, #1e1e1e, #1f1f1f);
+}
+
+
+/******************/
+/* Playlist vakje */
+/******************/
+
+.playlist{
+  position: relative;
+  height:20em;
+  margin:0;
+  padding:1em;
+
+  display:flex;
+  gap:1em;
+  list-style:none;
+  border: grey 0.2em dashed;
+  border-radius: 0.5em;
+}
+
+.playlist:empty::after{
+  content: "Sleep je favoriete nummers naar dit lijstje :)";
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  max-width:16em;
+  text-align:center;
 }
 
 
