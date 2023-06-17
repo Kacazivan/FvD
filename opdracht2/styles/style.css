@@ -132,8 +132,6 @@ li {
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  
-  /*background-image:var(--savaidunav-achtergrondkleur);*/
 }
 
 li h2 {
@@ -246,6 +244,22 @@ li:nth-of-type(13){
   text-align:center;
 }
 
+
+/******************/
+/* Audio controls */
+/******************/
+
+audio::-webkit-media-controls {
+  display: none;
+}
+
+audio::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+audio::-webkit-media-controls-panel {
+  display: none !important;
+}
 
 
 
