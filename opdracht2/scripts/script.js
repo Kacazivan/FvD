@@ -1,6 +1,11 @@
 // JavaScript Document
 console.log("howdy");
 
+// drag en drop vars
+var favoLijst = document.querySelector("footer ul");
+var allesLijst = document.querySelector("ul:first-of-type");
+
+
 /* getting started --> https://swiperjs.com/get-started */
 
 var options = {
@@ -35,4 +40,21 @@ swiper.on('slideChange', function () {
   }
 });
 
-/* EERSTE AUDIO SPEELT NIET AUTOMATISCH AF?? */
+
+/* Drag en drop */
+new Sortable(allesLijst, {
+	group: {
+		name: 'fotoLijstjes', // zelfde naam als bij favoLijstje
+		pull: 'clone' // er wordt een kopie gemaakt
+	},
+	sort: false, // de foto kunnen in de lijst zelf niet gesorteerd worden
+	animation: 300 // een kleine animatie als een foto gecloned wordt
+});
+
+new Sortable(favoLijst, {
+	group: {
+		name: 'fotoLijstjes', // zelfde naam als bij allesLijstje
+		pull: 'false' // foto's kunnen niet uit de favo lijst gesleept worden
+	},
+	animation: 300 // een kleine animatie als een foto van plek wisselt
+});

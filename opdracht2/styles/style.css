@@ -119,6 +119,7 @@ ul {
   margin:0;
   padding:0;
   list-style:none;
+  flex-shrink: 0; /*zorgt ervoor dat carousel niet krimpt*/
 }
 
 /****************/
@@ -132,6 +133,9 @@ li {
   flex-direction:column;
   justify-content:center;
   align-items:center;
+
+  /* Drag en drop */
+  cursor: grab;
 }
 
 li h2 {
@@ -232,6 +236,7 @@ li:nth-of-type(13){
   list-style:none;
   border: grey 0.2em dashed;
   border-radius: 0.5em;
+  flex-shrink: 0;
 }
 
 .playlist:empty::after{
@@ -249,17 +254,41 @@ li:nth-of-type(13){
 /* Audio controls */
 /******************/
 
-audio::-webkit-media-controls {
+/*Dit verbergt de bedieningselementen van de audio, zoals afspeelknoppen etc*/
+audio::-webkit-media-controls { 
   display: none;
 }
 
+/*Dit verbergt het omsluitende element van de bedieningselementen voor audio; gebied waar normaal
+gesproken de bedieningselementen worden weergegeven.*/
 audio::-webkit-media-controls-enclosure {
   display: none !important;
 }
 
+/*Dit verbergt het specifieke paneel dat de bedieningselementen bevat. Het paneel kan extra 
+bedieningselementen bevatten, zoals een volumeregelaar en knoppen voor vooruit- en terugspoelen.*/
 audio::-webkit-media-controls-panel {
   display: none !important;
 }
+
+/****************/
+/* Drag en drop */
+/****************/
+li.sortable-ghost{
+  cursor: grabbing;
+}
+
+footer ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  display: list-item;
+  margin-bottom: 5px; /* Optioneel, voeg marge toe tussen de lijstitems */
+}
+
 
 
 
