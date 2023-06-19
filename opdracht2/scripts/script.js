@@ -58,3 +58,5 @@ new Sortable(favoLijst, {
 	},
 	animation: 300 // een kleine animatie als een foto van plek wisselt
 });
+
+

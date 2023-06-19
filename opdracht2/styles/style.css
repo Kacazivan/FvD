@@ -231,23 +231,32 @@ li:nth-of-type(13){
   margin:0;
   padding:1em;
 
-  display:flex;
+  display:block;
   gap:1em;
   list-style:none;
   border: grey 0.2em dashed;
   border-radius: 0.5em;
   flex-shrink: 0;
+
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .playlist:empty::after{
   content: "Sleep je favoriete nummers naar dit lijstje :)";
   position: absolute;
-  left: 50%;
-  top:50%;
-  transform:translate(-50%, -50%);
+  left: 7%;
+  top: 50%;
   max-width:16em;
   text-align:center;
 }
+
+.playlist li {
+  display: inline-block;
+  margin-right: .625em; /* Optioneel, voeg ruimte toe tussen de lijstitems */
+}
+
+
 
 
 /******************/
@@ -278,16 +287,8 @@ li.sortable-ghost{
   cursor: grabbing;
 }
 
-footer ul {
-  display: block;
-  padding: 0;
-  margin: 0;
-}
 
-footer ul li {
-  display: list-item;
-  margin-bottom: 5px; /* Optioneel, voeg marge toe tussen de lijstitems */
-}
+
 
 
 
