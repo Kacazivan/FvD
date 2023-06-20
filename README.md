@@ -210,7 +210,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevinding 2:
   Het tweede punt wat ik heb ontdekt dat niet in orde is, is de slider. Namelijk de slider krimpt zodra de.playlist groter wordt. (zie afbeeldingen)
   <img src="readme-images/drag-drop-werkt-niet.png" width="375px" alt="mislukking drag en drop">
-  <img src="readme-images/playlistKleiner.png" width="375px" alt="mislukking drag en drop">
+  <img src="readme-images/playlistKleiner.png" width="375px" alt="mislukking drag en drop #2">
 
 
   #### oplossing:
@@ -271,15 +271,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/namere.png" width="375px" alt="namere achtergrond">
   <img src="readme-images/dzanum.png" width="375px" alt="dzanum achtergrond">
 
-  HTML:
-  li class="swiper-slide"
-        h2Namere/h2
-				p>Brzo Trči Ljanmi/p
-        img src="../opdracht2/images/namere.png" alt="Namere - Brzo Trči Ljanmi"/ 
-        audio controls autoplay src="../opdracht2/liedjes/namere.mp3"
-  /li
-
-  CSS:
   li:nth-of-type(2){
     background: var(--namere-background);
   }
