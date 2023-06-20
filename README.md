@@ -175,15 +175,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/schets-opdracht-2.png" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Leren hoe ik een carousel kan maken met verschillende liedjes eventueel met audio nog erbij.
+  - Leren hoe ik drag en drop kan toepassen op verschillende elementen.
+  - Leren hoe ik liedjes kan verwijderen met een button en eventueel drag en drop als het me lukt.
 </details>
 
 
@@ -192,29 +191,51 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken na testen (week 7)</summary>
+  Het is week 7 en ik ben nog steeds bezig met het coderen van de tweede opdracht alleen het verloopt niet
+  echt soepeltjes. In mijn schets wilde ik graag drag en drop toepassen op de nummers. Dus dat je de mogelijkheid hebt om de nummers te slepen naar het playlist vakje. 
 
   Neem minimaal 5 bevindingen op:
 
-
-
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Het eerste punt want niet in orde is, is de drag en drop van de carousel. Namelijk hij doet het niet.
+  <img src="readme-images/drag-drop-werkt-niet.png" width="375px" alt="mislukking drag en drop">
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Ik denk dat het probleem ligt bij de var in de JS. Dus dat moet ik nog even uitzoeken. Ik heb geprobeerd eerst ul:first-of-type en ul:last-of-type te gebruiken om de ul's op te roepen, maar die werkten niet. Ik denk dat het probleem bij ul:last-of-type ligt. Dat heb ik nu veranderd van ul:last-of-type naar footer ul. Dit werkte wel voor eventjes.  
+  <img src="readme-images/var.png" width="375px" alt="mislukking drag en drop">
+
 
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Het tweede punt wat ik heb ontdekt dat niet in orde is, is de slider. Namelijk de slider krimpt zodra de.playlist groter wordt. (zie afbeeldingen)
+  <img src="readme-images/drag-drop-werkt-niet.png" width="375px" alt="mislukking drag en drop">
+  <img src="readme-images/playlistKleiner" width="375px" alt="mislukking drag en drop">
+
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Het is me uiteindelijk gelukt om dit op te lossen! Namelijk met max-height. Nu krimpt de slider niet en heeft hij gelukkig een vaste grootte!
+  <img src="readme-images/max-height.png" width="375px" alt="max-height">
+
 
 
 
   ### Bevinding 3:
-  ...
+  Omdat mijn drag en drop uiteindelijk niet werkte. Heb ik besloten om dat helemaal weg te halen en een aparte ul te maken met de liedjes en daarop drag en drop toe te passen. Dit is ook gelukt! Alleen telkens als ik een nummer verwijder, wordt de li groter en groter.
+  <img src="readme-images/li-groter" width="375px" alt="li groter">
+
+  #### oplossing:
+  Dit heb ik uiteindelijk met Eva's hulp opgelost! Eigenlijk is het heel simpel, ik hoef alleen een max-width toe te voegen. 1 simpele regel dat iets groots veranderd:
+  <img src="readme-images/li-normaal.png" width="375px" alt="li normaal">
+
+
+
+
+  ### Einde bevinding:
+  Aangezien ik nog steeds problemen ondervind en daardoor niet veel onderdelen functioneren, heb ik slechts drie bevindingen. Voor de derde bevinding heb ik een onderdeel aangepast. Dit moet ik nog verder uitwerken!
+
+  
+
 </details>
 
 
@@ -225,17 +246,52 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/startscherm.png" width="375px" alt="uitkomst opdracht 2">
+  Wanneer je de hoofdpagina bezoekt, krijg je een slider te zien met daaronder allemaal nummers. De slider is bedoeld om een preview te geven van alle liedjes. Met behulp van deze slider kun je horen per lied wat voor lied het is. Dit kan je helpen bij het beslissen welke nummer je wilt houde of verwijderen in de playlist daaronder. Als je de lichte modus hebt ingeschakeld, worden er lichtere kleuren getoond. En als je de donkere modus aan hebt staan, krijg je wat donkerdere kleuren te zien. Dit heb ik gedaan door de roots aan te passen met behulp van '@media (prefers-color-scheme: dark)'. Het stukje code voor dit gedeelte zag er als volgt uit:
+
+  /************/
+  /* DARKMODE */
+  /************/
+  @media (prefers-color-scheme:dark) {
+    :root{
+      --playlistLi-background: var(--playlistLi-background-darkmode);
+      --playlistLi-hover-background: var(--playlistLi-hover-background-darkmode);
+      --deleteButton-hover-background: var(--deleteButton-hover-background-darkmode);
+      --fontkleur: var(--fontKleur-darkmode);
+      --achtergrondKleur: var(--achtergrondKleur-darkmode);
+      --li-drag-kleur: var(--li-drag-darkmode);
+    }
+  }
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Ik ben blij te kunnen zeggen dat de slider goed is verlopen. Eerlijk gezegd had ik in het begin behoorlijk wat moeite, maar uiteindelijk is het gelukkig gelukt! Ik ben er erg tevreden mee. In de slider zijn een h2, p, img en audio opgenomen. In het begin had ik ook wat problemen met de audio, omdat het me niet lukte om één audio per slide af te spelen. Maar uiteindelijk is dat ook gelukt! YouTube filmpjes hebben me enorm geholpen. Ik ben ook erg blij dat de achtergrond per slide verandert. Ik heb dit zo ingesteld zodat het past bij het lied. Hieronder vind je een voorbeeld met nog bijpassende stukje code van een nummer:
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/namere.png" width="375px" alt="namere achtergrond">
+  <img src="readme-images/dzanum.png" width="375px" alt="dzanum achtergrond">
+
+  HTML:
+  <li class="swiper-slide">
+        <h2>Namere</h2>
+				<p>Brzo Trči Ljanmi</p>
+        <img src="../opdracht2/images/namere.png" alt="Namere - Brzo Trči Ljanmi"/> 
+        <audio controls autoplay src="../opdracht2/liedjes/namere.mp3"></audio>
+  </li>
+
+  CSS:
+  li:nth-of-type(2){
+    background: var(--namere-background);
+  }
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Helaas zijn er enkele onderdelen niet gelukt, zoals het toepassen van de "drag and drop" functie op de carousel. Uiteindelijk lukte het me wel om de nummers naar het afspeellijstvakje te slepen. Echter, zodra ze in het afspeellijstvakje werden geplaatst, begonnen de nummers zich vreemd te gedragen. Omdat ik al veel moeite had met het toepassen van "drag and drop" op de carousel, heb ik uiteindelijk besloten om dit op te geven. Ik was bang dat als ik ermee verder zou gaan, ik in tijdnood zou komen, terwijl ik wist dat ik het probleem niet op tijd zou kunnen oplossen. Daarom heb ik dit onderdeel vervangen door een ul-element met li-elementen, waarop ik "drag and drop" heb toegepast. 
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  Zoals ik al had verteld is het me gelukt om "drag and drop" toe te passen op een ander onderdeel, namelijk de aparte afspeellijst met de nummers. Dit verliep allemaal goed totdat ik het uitprobeerde door een paar nummers te verwijderen. Telkens wanneer je nummers verwijdert, wordt de ruimte tussen de li-elementen steeds groter. Ik heb geprobeerd dit op te lossen door een max-height toe te voegen, maar dat bleek niet te helpen. Ook heb ik geprobeerd marges en andere aanpassingen toe te voegen, maar dit werkte ook niet. Uiteindelijk heb ik besloten om het op te geven vanwege tijdgebrek en ben ik verder gegaan met het toepassen van de donkere modus. Hieronder zie je foto's van de toenemende ruimte tussen de li-elementen:
+
+  <img src="readme-images/groot1.png" width="375px" alt="toenemende ruimte 1">
+  <img src="readme-images/groot2.png" width="375px" alt="toenemende ruimte 2">
+
+  Na talloze pogingen (en nog steeds enkele recente mislukkingen) beschouw ik deze opdracht als een waardevolle leerervaring. De afgelopen weken heb ik enorm veel geleerd. Een van de dingen die ik ontdekte, was het feit dat je bibliotheken kunt importeren in je code, wat natuurlijk ontzettend handig is. Ik vond het werken met "drag and drop" erg leuk en interessant, vooral aan het einde toen ik de mogelijkheid had om alles mocht stylen. Het enige wat me teleurstelt, is dat ik er niet in ben geslaagd om de toenemende ruimte tussen de li-elementen op te lossen. Ondanks dat, kijk ik toch met trots terug op mijn leerproces en de vaardigheden die ik heb opgedaan. Hopelijk vinden jullie dat ook! :)
 </details>
