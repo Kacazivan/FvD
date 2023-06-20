@@ -1,10 +1,6 @@
 // JavaScript Document
 console.log("howdy");
 
-// drag en drop vars
-var favoLijst = document.querySelector("footer ul");
-var allesLijst = document.querySelector("ul:first-of-type");
-
 
 /* getting started --> https://swiperjs.com/get-started */
 
@@ -41,22 +37,23 @@ swiper.on('slideChange', function () {
 });
 
 
-/* Drag en drop */
-new Sortable(allesLijst, {
-	group: {
-		name: 'fotoLijstjes', // zelfde naam als bij favoLijstje
-		pull: 'clone' // er wordt een kopie gemaakt
-	},
-	sort: false, // de foto kunnen in de lijst zelf niet gesorteerd worden
-	animation: 300 // een kleine animatie als een foto gecloned wordt
+//Drag en drop
+var playlist = document.querySelector(".playlist");
+new Sortable(playlist, {
+  animation: 300, // ca 300ms is meestal een mooie tijd
 });
 
-new Sortable(favoLijst, {
-	group: {
-		name: 'fotoLijstjes', // zelfde naam als bij allesLijstje
-		pull: 'false' // foto's kunnen niet uit de favo lijst gesleept worden
-	},
-	animation: 300 // een kleine animatie als een foto van plek wisselt
-});
+// Vind alle deleteknoppen
+var deleteButtons = document.querySelectorAll('.deleteButton');
 
+// Loop door elke deleteknop en voeg een klikgebeurtenis toe
+deleteButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Vind de ouder <li> van de deleteknop
+        const listItem = button.closest('li');
+
+        // Verwijder het <li>-element
+        listItem.remove();
+    });
+});
 

@@ -102,6 +102,7 @@ header {
 /********/
 main {
   width:100%;
+  height: 60%;
   max-width:22em;
   max-height:40em;
   margin:0 auto;
@@ -125,7 +126,7 @@ ul {
 /****************/
 /* een karakter */
 /****************/
-li { 
+main li { 
   height:100%;
   
   /* !important is nodig omdat swiper.js display:block; aan de li toevoegt - en daardoor zou de lay-out van de kaart misgaan */
@@ -133,24 +134,21 @@ li {
   flex-direction:column;
   justify-content:center;
   align-items:center;
-
-  /* Drag en drop */
-  cursor: grab;
 }
 
-li h2 {
+main li h2 {
   margin-top: 0.8em;  
   font-size: 1.4em;
   font-family: 'circularBold';
 }
 
-li p {
+main li p {
   margin-top: -0.7em;
   font-family: 'circular';
   font-size: 0.8em;
 }
 
-li img {
+main li img {
   width:auto;
   height:13em;
   order:-1;
@@ -161,6 +159,12 @@ li img {
   border:none;
   background:none;
 }
+
+.swiper-wrapper {
+  min-height: 0;
+}
+
+
 
 
 /*****************/
@@ -225,7 +229,7 @@ li:nth-of-type(13){
 /* Playlist vakje */
 /******************/
 
-.playlist{
+/* .playlist{
   position: relative;
   height:20em;
   margin:0;
@@ -254,8 +258,66 @@ li:nth-of-type(13){
 .playlist li {
   display: inline-block;
   margin-right: .625em; /* Optioneel, voeg ruimte toe tussen de lijstitems */
+/* } */ 
+
+/*******************/
+/* Playlist Footer */
+/*******************/
+footer{
+  margin-top: -17em;
 }
 
+.playlist{
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-gap: 1em;
+
+  position: absolute;
+  white-space: nowrap;
+}
+
+.playlist li {
+	background: var(--color-background);
+	border: 0.1875em solid var(--button-border-color);
+	border-radius: .8em;
+
+	display: flex;
+	flex-direction: row;
+  align-items: center;
+
+	cursor: grab;
+  background-color: grey;
+  margin-top: -.5em;
+
+  width: 22em;
+}
+  
+.playlist li h2{
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+.playlist img{
+  height: 3em;
+  border-radius: .2em;
+  margin-left: 1em;
+  order: -1;
+}
+
+.deleteButton{
+	background: rgba(0, 0, 0, 0.694);
+	border: none;
+  border-radius: .2em;
+	font-size: 1.5em;
+  margin-left: auto;
+  margin-right: .7em;
+}
+
+li.sortable-drag {
+	background: yellow;
+	cursor: grab;
+}
 
 
 
