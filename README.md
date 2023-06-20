@@ -210,7 +210,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevinding 2:
   Het tweede punt wat ik heb ontdekt dat niet in orde is, is de slider. Namelijk de slider krimpt zodra de.playlist groter wordt. (zie afbeeldingen)
   <img src="readme-images/drag-drop-werkt-niet.png" width="375px" alt="mislukking drag en drop">
-  <img src="readme-images/playlistKleiner" width="375px" alt="mislukking drag en drop">
+  <img src="readme-images/playlistKleiner.png" width="375px" alt="mislukking drag en drop">
 
 
   #### oplossing:
@@ -222,7 +222,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevinding 3:
   Omdat mijn drag en drop uiteindelijk niet werkte. Heb ik besloten om dat helemaal weg te halen en een aparte ul te maken met de liedjes en daarop drag en drop toe te passen. Dit is ook gelukt! Alleen telkens als ik een nummer verwijder, wordt de li groter en groter.
-  <img src="readme-images/li-groter" width="375px" alt="li groter">
+  <img src="readme-images/li-groter.png" width="375px" alt="li groter">
 
   #### oplossing:
   Dit heb ik uiteindelijk met Eva's hulp opgelost! Eigenlijk is het heel simpel, ik hoef alleen een max-width toe te voegen. 1 simpele regel dat iets groots veranderd:
@@ -272,12 +272,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/dzanum.png" width="375px" alt="dzanum achtergrond">
 
   HTML:
-  <li class="swiper-slide">
-        <h2>Namere</h2>
-				<p>Brzo Trči Ljanmi</p>
-        <img src="../opdracht2/images/namere.png" alt="Namere - Brzo Trči Ljanmi"/> 
-        <audio controls autoplay src="../opdracht2/liedjes/namere.mp3"></audio>
-  </li>
+  li class="swiper-slide"
+        h2Namere/h2
+				p>Brzo Trči Ljanmi/p
+        img src="../opdracht2/images/namere.png" alt="Namere - Brzo Trči Ljanmi"/ 
+        audio controls autoplay src="../opdracht2/liedjes/namere.mp3"
+  /li
 
   CSS:
   li:nth-of-type(2){
