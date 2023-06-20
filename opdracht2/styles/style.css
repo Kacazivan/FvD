@@ -40,15 +40,63 @@ input {
 }
 
 :root{
-  --swiper-theme-color:#000;
+  --swiper-theme-color:white;
+
+  /*achtergrond kleuren liedjes -> gebruikte generator: https://mycolor.space/gradient3*/
+  --savaidunav-background: linear-gradient(to right bottom, #322a28, #342c2d, #342e31, #343035, #333338, #303338, #2d3336, #2b3334, #272f2e, #242c27, #232721, #23231b);
+  --namere-background: linear-gradient(to right top, #3b5256, #3f565a, #445b5e, #485f63, #4d6467, #4d6468, #4e6568, #4e6569, #4a6266, #465e63, #435b60, #3f585d);
+  --dzanum-background: linear-gradient(to right top, #614843, #654e4d, #685556, #6a5c5f, #6c6366, #6d6567, #6d6669, #6e686a, #6d6466, #6d6062, #6c5c5d, #6b5858); 
+  --level-background: linear-gradient(to right top, #331718, #2f171a, #2a181c, #26191c, #21191c, #20191c, #20191b, #1f191b, #22191b, #24191a, #271a19, #291a18);
+  --februar-background: linear-gradient(to right top, #37272a, #36272a, #35282b, #33282b, #32282b, #35292c, #37292d, #3a2a2e, #412b30, #472c31, #4e2e31, #542f31);
+  --dalisi-background: linear-gradient(to right top, #293335, #252f31, #222c2e, #1e282a, #1b2527, #1a2426, #1a2426, #192325, #1a2427, #1c2628, #1d272a, #1f292c);
+  --zlatnodete-background: linear-gradient(to right top, #29312a, #2a342a, #2b372a, #2d3a2a, #2f3d29, #323f27, #354024, #394221, #40421b, #474216, #4f4112, #583f0f);
+  --behute-background: linear-gradient(to right top, #3a201c, #3c201c, #3e1f1c, #3f1f1d, #411e1d, #431f1d, #451f1c, #47201c, #4a221b, #4c241b, #4f271a, #512919);
+  --tiija-background: linear-gradient(to right top, #1c1d1e, #1c1c1d, #1b1b1c, #1b1b1b, #1a1a1a, #1a1a1a, #191919, #191919, #191919, #191a19, #1a1a1a, #1a1a1a);
+  --grijehje-background: linear-gradient(to right top, #513a25, #4a3724, #423424, #3c3023, #352d23, #382f24, #3c3024, #3f3225, #4d3a27, #5c4129, #6c492c, #7c502f); 
+  --letoje-background: linear-gradient(to right top, #5b626a, #565c67, #515663, #4e505f, #4b4a5b, #4a4a5d, #4a4a5e, #494a60, #485169, #475971, #446079, #41687f);
+  --moncheri-background: linear-gradient(to right top, #1b1c1c, #1b1c1c, #1a1b1c, #1a1b1b, #1a1a1b, #1a1a1b, #1a1a1a, #1a1a1a, #1a1a1a, #1b1a1b, #1b1b1b, #1b1b1c);
+  --kolo-background: linear-gradient(to right top, #1d1d1c, #1d1d1c, #1d1c1c, #1c1c1c, #1c1c1c, #1c1c1c, #1d1d1d, #1d1d1d, #1d1d1d, #1e1e1e, #1e1e1e, #1f1f1f);
+
+  /*lightmode palet*/
+  --playlistLi-background-lightmode: rgb(179, 179, 179);
+  --playlistLi-hover-background-lightmode: #5871759f;
+  --deleteButton-hover-background-lightmode: rgba(224, 224, 224, 0.404);
+  --whiteSpace:clamp(1em, 4vw, 1.5em);
+  --fontKleur-lightmode:#000;
+  --achtergrondKleur-lightmode:rgb(214,214,214);
+  --li-drag-lightmode: #609097d3;
+ 
+  /* darkmode palet */
+  --fontKleur-darkmode:rgb(255, 255, 255);
+  --achtergrondKleur-darkmode:#111;
+  --listColor-darkmode:#222;
+  --playlistLi-background-darkmode: rgb(53, 53, 53);
+  --playlistLi-hover-background-darkmode: #442e32d3;
+  --deleteButton-hover-background-darkmode: rgba(224, 224, 224, 0.185);
+  --li-drag-darkmode: rgba(187, 69, 89, 0.883);
+ 
+  /* lightmode properties */
+  --playlistLi-background: var(--playlistLi-background-lightmode);
+  --playlistLi-hover-background: var(--playlistLi-hover-background-lightmode);
+  --deleteButton-hover-background: var(--deleteButton-hover-background-lightmode);
+  --fontkleur: var(--fontKleur-lightmode);
+  --achtergrondKleur: var(--achtergrondKleur-lightmode);
+  --li-drag-kleur: var(--li-drag-lightmode);
 }
 
-body {
-  --whiteSpace:clamp(1em, 4vw, 1.5em);
-  --fontKleur:#000;
-  --achtergrondKleur:rgb(214,214,214);
-  --listColor:#fff;
-  
+@media (prefers-color-scheme:dark) {
+  :root{
+    --playlistLi-background: var(--playlistLi-background-darkmode);
+    --playlistLi-hover-background: var(--playlistLi-hover-background-darkmode);
+    --deleteButton-hover-background: var(--deleteButton-hover-background-darkmode);
+    --fontkleur: var(--fontKleur-darkmode);
+    --achtergrondKleur: var(--achtergrondKleur-darkmode);
+    --li-drag-kleur: var(--li-drag-darkmode);
+  }
+}
+
+
+body {  
   height:100%;
   margin:0;
   
@@ -56,19 +104,12 @@ body {
   grid-template-rows:min-content 1fr;
   justify-content:center;
   font-family:saira, sans-serif;
-  color:var(--fontKleur);
+  color: var(--fontkleur);
   background-color:var(--achtergrondKleur);
 }
 
-@media (prefers-color-scheme:dark) {
-  body {
-    --fontKleur:#fff;
-    --achtergrondKleur:#111;
-    --listColor:#222;
-        
-    /*  Stap 4b. */
-    --swiper-theme-color:#fff;
-  }
+.swiper-pagination{
+  color: white;
 }
 
 h1 {
@@ -85,6 +126,10 @@ p {
 
 input {
   font:inherit;
+}
+
+.swiper-slide{
+  color: var(--fontKleur-darkmode);
 }
 
 
@@ -106,7 +151,6 @@ main {
   max-width:22em;
   max-height:40em;
   margin:0 auto;
-  background-color:var(--listColor);
   border-radius:calc(var(--whiteSpace) / 2);
   overflow:scroll;
 }
@@ -171,94 +215,58 @@ main li img {
 /* achtergronden */
 /*****************/
 
-/*achtergrond kleuren liedjes -> gebruikte generator: https://mycolor.space/gradient3*/
 li:first-of-type{
-  background: linear-gradient(to right bottom, #322a28, #342c2d, #342e31, #343035, #333338, #303338, #2d3336, #2b3334, #272f2e, #242c27, #232721, #23231b);;
+  background: var(--savaidunav-background);
 }
 
 li:nth-of-type(2){
-  background: linear-gradient(to right top, #3b5256, #3f565a, #445b5e, #485f63, #4d6467, #4d6468, #4e6568, #4e6569, #4a6266, #465e63, #435b60, #3f585d);;
+  background: var(--namere-background);
 }
 
 li:nth-of-type(3){
-  background: linear-gradient(to right top, #614843, #654e4d, #685556, #6a5c5f, #6c6366, #6d6567, #6d6669, #6e686a, #6d6466, #6d6062, #6c5c5d, #6b5858);;
+  background: var(--dzanum-background);
 }
 
 li:nth-of-type(4){
-  background: linear-gradient(to right top, #331718, #2f171a, #2a181c, #26191c, #21191c, #20191c, #20191b, #1f191b, #22191b, #24191a, #271a19, #291a18);
+  background: var(--level-background);
 }
 
 li:nth-of-type(5){
-  background: linear-gradient(to right top, #37272a, #36272a, #35282b, #33282b, #32282b, #35292c, #37292d, #3a2a2e, #412b30, #472c31, #4e2e31, #542f31);;
+  background: var(--februar-background);
 }
 
 li:nth-of-type(6){
-  background: linear-gradient(to right top, #293335, #252f31, #222c2e, #1e282a, #1b2527, #1a2426, #1a2426, #192325, #1a2427, #1c2628, #1d272a, #1f292c);;
+  background: var(--dalisi-background);
 }
 
 li:nth-of-type(7){
-  background: linear-gradient(to right top, #29312a, #2a342a, #2b372a, #2d3a2a, #2f3d29, #323f27, #354024, #394221, #40421b, #474216, #4f4112, #583f0f);
+  background: var(--zlatnodete-background);
 }
 
 li:nth-of-type(8){
-  background: linear-gradient(to right top, #3a201c, #3c201c, #3e1f1c, #3f1f1d, #411e1d, #431f1d, #451f1c, #47201c, #4a221b, #4c241b, #4f271a, #512919);
+  background: var(--behute-background);
 }
 
 li:nth-of-type(9){
-  background: linear-gradient(to right top, #1c1d1e, #1c1c1d, #1b1b1c, #1b1b1b, #1a1a1a, #1a1a1a, #191919, #191919, #191919, #191a19, #1a1a1a, #1a1a1a);
+  background: var(--tiija-background);
 }
 
 li:nth-of-type(10){
-  background: linear-gradient(to right top, #513a25, #4a3724, #423424, #3c3023, #352d23, #382f24, #3c3024, #3f3225, #4d3a27, #5c4129, #6c492c, #7c502f); 
+  background: var(--grijehje-background);
 }
 
 li:nth-of-type(11){
-  background: linear-gradient(to right top, #5b626a, #565c67, #515663, #4e505f, #4b4a5b, #4a4a5d, #4a4a5e, #494a60, #485169, #475971, #446079, #41687f);
+ background: var(--letoje-background);
 }
 
 li:nth-of-type(12){
-  background: linear-gradient(to right top, #1b1c1c, #1b1c1c, #1a1b1c, #1a1b1b, #1a1a1b, #1a1a1b, #1a1a1a, #1a1a1a, #1a1a1a, #1b1a1b, #1b1b1b, #1b1b1c);
+  background: var(--moncheri-background);
 }
 
 li:nth-of-type(13){
-  background: linear-gradient(to right top, #1d1d1c, #1d1d1c, #1d1c1c, #1c1c1c, #1c1c1c, #1c1c1c, #1d1d1d, #1d1d1d, #1d1d1d, #1e1e1e, #1e1e1e, #1f1f1f);
+  background: var(--kolo-background);
 }
 
-
-/******************/
-/* Playlist vakje */
-/******************/
-
-/* .playlist{
-  position: relative;
-  height:20em;
-  margin:0;
-  padding:1em;
-
-  display:block;
-  gap:1em;
-  list-style:none;
-  border: grey 0.2em dashed;
-  border-radius: 0.5em;
-  flex-shrink: 0;
-
-  white-space: nowrap;
-  overflow-x: auto;
-}
-
-.playlist:empty::after{
-  content: "Sleep je favoriete nummers naar dit lijstje :)";
-  position: absolute;
-  left: 7%;
-  top: 50%;
-  max-width:16em;
-  text-align:center;
-}
-
-.playlist li {
-  display: inline-block;
-  margin-right: .625em; /* Optioneel, voeg ruimte toe tussen de lijstitems */
-/* } */ 
 
 /*******************/
 /* Playlist Footer */
@@ -271,42 +279,48 @@ footer{
 	list-style: none;
 	padding: 0;
 	display: grid;
-	grid-gap: 1em;
 
   position: absolute;
+
+  height: 100%;
+  margin: 0;
   white-space: nowrap;
 }
 
 .playlist li {
-	background: var(--color-background);
-	border: 0.1875em solid var(--button-border-color);
-	border-radius: .8em;
+	background: var(--playlistLi-background);
+	border-radius: .5em;
 
 	display: flex;
 	flex-direction: row;
   align-items: center;
 
 	cursor: grab;
-  background-color: grey;
   margin-top: -.5em;
 
   width: 22em;
+
+  max-height: 3em;
+}
+
+.playlist li:hover{
+  background: var(--playlistLi-hover-background);
 }
   
 .playlist li h2{
   font-size: 1em;
-  margin-left: 10px;
+  margin-left: .625em;
 }
 
 .playlist img{
-  height: 3em;
+  height: 2em;
   border-radius: .2em;
   margin-left: 1em;
   order: -1;
 }
 
 .deleteButton{
-	background: rgba(0, 0, 0, 0.694);
+  background: none;
 	border: none;
   border-radius: .2em;
 	font-size: 1.5em;
@@ -314,9 +328,22 @@ footer{
   margin-right: .7em;
 }
 
+.deleteButton:hover{
+  background: var(--deleteButton-hover-background);
+}
+
 li.sortable-drag {
-	background: yellow;
+	background: var(--li-drag-kleur);
 	cursor: grab;
+}
+
+
+
+/****************/
+/* Drag en drop */
+/****************/
+li.sortable-ghost{
+  cursor: grabbing;
 }
 
 
@@ -340,13 +367,6 @@ audio::-webkit-media-controls-enclosure {
 bedieningselementen bevatten, zoals een volumeregelaar en knoppen voor vooruit- en terugspoelen.*/
 audio::-webkit-media-controls-panel {
   display: none !important;
-}
-
-/****************/
-/* Drag en drop */
-/****************/
-li.sortable-ghost{
-  cursor: grabbing;
 }
 
 
