@@ -1,7 +1,9 @@
 // JavaScript Document
 console.log("howdy");
 
-
+//////////
+//SLIDER//
+//////////
 /* getting started --> https://swiperjs.com/get-started */
 
 var options = {
@@ -37,12 +39,18 @@ swiper.on('slideChange', function () {
 });
 
 
-//Drag en drop
+////////////////
+//DRAG EN DROP//
+////////////////
 var playlist = document.querySelector(".playlist");
 new Sortable(playlist, {
   animation: 300, // ca 300ms is meestal een mooie tijd
 });
 
+
+/////////////////
+//DELETE BUTTON//
+/////////////////
 // Vind alle deleteknoppen
 var deleteButtons = document.querySelectorAll('.deleteButton');
 
