@@ -104,9 +104,10 @@ body {
   margin:0;
   
   display:grid;
-  grid-template-rows:min-content 1fr;
+  grid-template-rows:min-content 1fr 12em;
+
   justify-content:center;
-  font-family:saira, sans-serif;
+  font-family: 'circularBold';
   color: var(--fontkleur);
   background-color:var(--achtergrondKleur);
 }
@@ -125,14 +126,14 @@ header {
 /********/
 /* MAIN */
 /********/
-main {
-  width:100%;
-  height: 60%;
-  max-width:22em;
-  max-height:40em;
-  margin:0 auto;
-  border-radius:calc(var(--whiteSpace) / 2);
-  overflow:scroll;
+.swiper {
+  width: 100%;
+  height: 100%;
+  max-width: 22em;
+  max-height: 40em;
+  margin: 0 auto;
+  border-radius: calc(var(--whiteSpace) / 2);
+  overflow: scroll;
 }
 
 
@@ -163,7 +164,7 @@ input {
   color: var(--fontKleur-darkmode);
 }
 
-main ul {
+.swiper ul {
   height:100%;
   margin:0;
   padding:0;
@@ -171,7 +172,7 @@ main ul {
   flex-shrink: 0; /*zorgt ervoor dat carousel niet krimpt*/
 }
 
-main li { 
+.swiper li { 
   height:100%;
   
   /* !important is nodig omdat swiper.js display:block; aan de li toevoegt - en daardoor zou de lay-out van de kaart misgaan */
@@ -181,19 +182,19 @@ main li {
   align-items:center;
 }
 
-main li h2 {
+.swiper li h2 {
   margin-top: 0.8em;  
   font-size: 1.4em;
   font-family: 'circularBold';
 }
 
-main li p {
+.swiper li p {
   margin-top: -0.7em;
   font-family: 'circular';
   font-size: 0.8em;
 }
 
-main li img {
+.swiper li img {
   width:auto;
   height:13em;
   order:-1;
@@ -269,20 +270,22 @@ li:nth-of-type(13){
 /*******************/
 /* PLAYLIST FOOTER */
 /*******************/
-footer{
-  margin-top: -17em;
-}
 
 .playlist{
+  display: grid;
+  grid-template-rows:min-content 1fr;
+}
+
+.playlist ul{
 	list-style: none;
 	padding: 0;
 	display: grid;
-
-  position: absolute;
-
-  height: 100%;
+  align-content: start;
+  gap: .5em;
+  overflow: scroll;
+  
   margin: 0;
-  white-space: nowrap;
+  white-space: nowrap; /*de tekst wordt op één regel weergegeven zonder te worden afgebroken.*/
 }
 
 .playlist li {
@@ -294,11 +297,11 @@ footer{
   align-items: center;
 
 	cursor: grab;
-  margin-top: -.5em;
+  /* margin-top: -.5em; */
 
   width: 22em;
 
-  max-height: 3em;
+  max-height: 3em; /*hierdoor wordt de li niet vergroot bij het verwijderen van de li's*/
 }
 
 .playlist li:hover{
@@ -343,27 +346,34 @@ li.sortable-ghost{
   cursor: grabbing;
 }
 
+@media (width>50em){
+  body{
+    grid-template-columns: 1fr 28em;
+    grid-template-rows: min-content 1fr;
+  }
 
-/******************/
-/* AUDIO CONTROLS */
-/******************/
+  header{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 
-/*Dit verbergt de bedieningselementen van de audio, zoals afspeelknoppen etc*/
-audio::-webkit-media-controls { 
-  display: none;
+  .swiper{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .playlist{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 }
 
-/*Dit verbergt het omsluitende element van de bedieningselementen voor audio; gebied waar normaal
-gesproken de bedieningselementen worden weergegeven.*/
-audio::-webkit-media-controls-enclosure {
-  display: none !important;
-}
-
-/*Dit verbergt het specifieke paneel dat de bedieningselementen bevat. Het paneel kan extra 
-bedieningselementen bevatten, zoals een volumeregelaar en knoppen voor vooruit- en terugspoelen.*/
-audio::-webkit-media-controls-panel {
-  display: none !important;
-}
 
 
 

@@ -24,6 +24,9 @@ var options = {
 const swiper = new Swiper('.swiper', options);
 let currentAudio = null;
 
+/////////
+//AUDIO//
+/////////
 swiper.on('slideChange', function () {
   const activeSlide = this.slides[this.activeIndex];
   const audioElement = activeSlide.querySelector('audio');
@@ -42,7 +45,7 @@ swiper.on('slideChange', function () {
 ////////////////
 //DRAG EN DROP//
 ////////////////
-var playlist = document.querySelector(".playlist");
+var playlist = document.querySelector(".playlist ul");
 new Sortable(playlist, {
   animation: 300, // ca 300ms is meestal een mooie tijd
 });
