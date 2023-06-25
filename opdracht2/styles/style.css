@@ -61,6 +61,7 @@ input {
   --fontKleur-lightmode:#000;
   --achtergrondKleur-lightmode:rgb(214,214,214);
   --li-drag-lightmode: #609097d3;
+  --shuffle-color-lightmode: #33666d;
  
   /* darkmode palet */
   --fontKleur-darkmode:rgb(255, 255, 255);
@@ -70,6 +71,7 @@ input {
   --playlistLi-hover-background-darkmode: #442e32d3;
   --deleteButton-hover-background-darkmode: rgba(224, 224, 224, 0.185);
   --li-drag-darkmode: rgba(187, 69, 89, 0.883);
+  --shuffle-color-darkmode: rgb(119, 88, 15);
  
   /* lightmode properties */
   --playlistLi-background: var(--playlistLi-background-lightmode);
@@ -78,6 +80,7 @@ input {
   --fontkleur: var(--fontKleur-lightmode);
   --achtergrondKleur: var(--achtergrondKleur-lightmode);
   --li-drag-kleur: var(--li-drag-lightmode);
+  --shuffle-color: var(--shuffle-color-lightmode);
 }
 
 
@@ -92,6 +95,7 @@ input {
     --fontkleur: var(--fontKleur-darkmode);
     --achtergrondKleur: var(--achtergrondKleur-darkmode);
     --li-drag-kleur: var(--li-drag-darkmode);
+    --shuffle-color: var(--shuffle-color-darkmode);
   }
 }
 
@@ -380,6 +384,24 @@ li.sortable-ghost{
     grid-row-end: 3;
   }
 }
+
+
+/*****************/
+/* SUFFLE BUTTON */
+/*****************/
+/* https://www.youtube.com/watch?v=lK2aiH1EP7w */
+.shuffle{
+  font-size: 2em;
+  color: white;
+  display: grid;
+  place-items: center;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  border: none;
+  background: var(--shuffle-color);
+}
+
 
 
 

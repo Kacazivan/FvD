@@ -69,3 +69,38 @@ deleteButtons.forEach(function(button) {
 });
 
 
+//////////////////
+//BUTTON SHUFFLE//
+//////////////////
+// Selecteer de shuffle-button
+var shuffleButton = document.querySelector('.shuffle');
+
+// Selecteer alle audio-elementen
+var audioElements = document.querySelectorAll('audio');
+
+// Maak een array van de audio-elementen
+var audioArray = Array.from(audioElements);
+
+// Voeg een event listener toe aan de shuffle-button
+shuffleButton.addEventListener('click', shuffleAudio);
+
+// Functie om audio willekeurig af te spelen
+function shuffleAudio() {
+  // Pauzeer alle audio-elementen
+  audioArray.forEach(audio => audio.pause());
+
+  // Kies een willekeurig audio-element
+  var randomIndex = Math.floor(Math.random() * audioArray.length);
+  var randomAudio = audioArray[randomIndex];
+
+  // Speel het willekeurige audio-element af
+  randomAudio.play();
+}
+
+// Voeg event listeners toe aan de audio-elementen om te pauzeren bij het einde van het afspelen
+audioArray.forEach(audio => {
+  audio.addEventListener('ended', () => {
+    audio.pause();
+  });
+});
+
