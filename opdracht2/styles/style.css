@@ -126,14 +126,15 @@ header {
 /********/
 /* MAIN */
 /********/
-.swiper {
-  width: 100%;
+main {
+  width:100%;
   height: 100%;
-  max-width: 22em;
-  max-height: 40em;
-  margin: 0 auto;
-  border-radius: calc(var(--whiteSpace) / 2);
-  overflow: scroll;
+  max-width:22em;
+  /* max-height:40em; */
+  margin:0 auto;
+  border-radius:calc(var(--whiteSpace) / 2); /* calc wordt gebruikt om wiskundige berekeningen 
+  uit te voeren in CSS en /2 deelt het aantal van de var*/
+  overflow:scroll;
 }
 
 
@@ -164,7 +165,7 @@ input {
   color: var(--fontKleur-darkmode);
 }
 
-.swiper ul {
+main ul {
   height:100%;
   margin:0;
   padding:0;
@@ -172,7 +173,7 @@ input {
   flex-shrink: 0; /*zorgt ervoor dat carousel niet krimpt*/
 }
 
-.swiper li { 
+main li { 
   height:100%;
   
   /* !important is nodig omdat swiper.js display:block; aan de li toevoegt - en daardoor zou de lay-out van de kaart misgaan */
@@ -182,19 +183,19 @@ input {
   align-items:center;
 }
 
-.swiper li h2 {
+main li h2 {
   margin-top: 0.8em;  
   font-size: 1.4em;
   font-family: 'circularBold';
 }
 
-.swiper li p {
+main li p {
   margin-top: -0.7em;
   font-family: 'circular';
   font-size: 0.8em;
 }
 
-.swiper li img {
+main li img {
   width:auto;
   height:13em;
   order:-1;
@@ -270,20 +271,26 @@ li:nth-of-type(13){
 /*******************/
 /* PLAYLIST FOOTER */
 /*******************/
+/* footer{
+  margin-top: -17em;
+} */
 
-.playlist{
+footer{
   display: grid;
   grid-template-rows:min-content 1fr;
 }
 
-.playlist ul{
+.playlist{
 	list-style: none;
 	padding: 0;
 	display: grid;
   align-content: start;
   gap: .5em;
   overflow: scroll;
-  
+
+  /* position: absolute; */
+
+  /* height: 100%; */
   margin: 0;
   white-space: nowrap; /*de tekst wordt op één regel weergegeven zonder te worden afgebroken.*/
 }
@@ -359,14 +366,14 @@ li.sortable-ghost{
     grid-row-end: 2;
   }
 
-  .swiper{
+  main{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
   }
 
-  .playlist{
+  footer{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;

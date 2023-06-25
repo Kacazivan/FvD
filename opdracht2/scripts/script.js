@@ -45,7 +45,7 @@ swiper.on('slideChange', function () {
 ////////////////
 //DRAG EN DROP//
 ////////////////
-var playlist = document.querySelector(".playlist ul");
+var playlist = document.querySelector(".playlist");
 new Sortable(playlist, {
   animation: 300, // ca 300ms is meestal een mooie tijd
 });
