@@ -105,10 +105,12 @@ input {
 /********/
 body {  
   height:100%;
+  width: 100vw;
   margin:0;
   
-  display:grid;
-  grid-template-rows:min-content 1fr 12em;
+  display:grid; 
+  grid-template-rows: 6em 1fr 1fr;
+  /* grid-template-rows:min-content 1fr 12em; */
 
   justify-content:center;
   font-family: 'circularBold';
@@ -124,17 +126,18 @@ header {
   max-width:28em;
   padding:var(--whiteSpace);
   text-align:center;
+  /* position: absolute; */
 }
 
 
-/********/
-/* MAIN */
-/********/
-main {
+/*************************/
+/* SECTION:FIRST-OF-TYPE */
+/*************************/
+section:first-of-type {
   width:100%;
   height: 100%;
   max-width:22em;
-  /* max-height:40em; */
+  max-height: 35em;
   margin:0 auto;
   border-radius:calc(var(--whiteSpace) / 2); /* calc wordt gebruikt om wiskundige berekeningen 
   uit te voeren in CSS en /2 deelt het aantal van de var*/
@@ -169,16 +172,16 @@ input {
   color: var(--fontKleur-darkmode);
 }
 
-main ul {
-  height:100%;
+.swiper ul {
+  /* height:100%; */
   margin:0;
   padding:0;
   list-style:none;
   flex-shrink: 0; /*zorgt ervoor dat carousel niet krimpt*/
 }
 
-main li { 
-  height:100%;
+.swiper li { 
+  /* height:100%; */
   
   /* !important is nodig omdat swiper.js display:block; aan de li toevoegt - en daardoor zou de lay-out van de kaart misgaan */
   display:flex !important; 
@@ -187,19 +190,19 @@ main li {
   align-items:center;
 }
 
-main li h2 {
+.swiper li h2 {
   margin-top: 0.8em;  
   font-size: 1.4em;
   font-family: 'circularBold';
 }
 
-main li p {
+.swiper li p {
   margin-top: -0.7em;
   font-family: 'circular';
   font-size: 0.8em;
 }
 
-main li img {
+.swiper li img {
   width:auto;
   height:13em;
   order:-1;
@@ -271,30 +274,26 @@ li:nth-of-type(13){
   background: var(--kolo-background);
 }
 
+section:last-of-type div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 
 /*******************/
 /* PLAYLIST FOOTER */
 /*******************/
-/* footer{
-  margin-top: -17em;
-} */
-
-footer{
-  display: grid;
-  grid-template-rows:min-content 1fr;
-}
-
 .playlist{
 	list-style: none;
 	padding: 0;
 	display: grid;
   align-content: start;
   gap: .5em;
+
+  height: 12em;
   overflow: scroll;
-
-  /* position: absolute; */
-
-  /* height: 100%; */
+  
   margin: 0;
   white-space: nowrap; /*de tekst wordt op één regel weergegeven zonder te worden afgebroken.*/
 }
@@ -308,8 +307,6 @@ footer{
   align-items: center;
 
 	cursor: grab;
-  /* margin-top: -.5em; */
-
   width: 22em;
 
   max-height: 3em; /*hierdoor wordt de li niet vergroot bij het verwijderen van de li's*/
@@ -357,38 +354,9 @@ li.sortable-ghost{
   cursor: grabbing;
 }
 
-@media (width>50em){
-  body{
-    grid-template-columns: 1fr 28em;
-    grid-template-rows: min-content 1fr;
-  }
-
-  header{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  main{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  footer{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-  }
-}
-
-
-/*****************/
-/* SUFFLE BUTTON */
-/*****************/
+/******************/
+/* SHUFFLE BUTTON */
+/******************/
 /* https://www.youtube.com/watch?v=lK2aiH1EP7w */
 .shuffle{
   font-size: 2em;
@@ -400,6 +368,38 @@ li.sortable-ghost{
   border-radius: 50%;
   border: none;
   background: var(--shuffle-color);
+}
+
+@media (width>60em){
+  main{
+    display: grid;
+    grid-template-columns: 1fr 30em;
+    width: 100vw;
+    justify-items: center;
+    position: relative;
+  }
+  
+  section:first-of-type {
+    position: absolute;
+    left: 8em;
+    top: 4.3em;
+    grid-row: 1; /* De swiper-sectie start op de eerste rij */
+    grid-column: 1; /* De swiper-sectie start op de eerste kolom */
+  }
+  
+  section:last-of-type {
+    /* margin-top: 3em; */
+    grid-row: 1; /* De playlist-sectie start op de eerste rij */
+    grid-column: 2; /* De playlist-sectie start op de tweede kolom */
+  }
+  
+  .playlist{
+    height: 100vh;
+  }
+
+  h1{
+    margin-top: 2.6em;
+  }
 }
 
 
