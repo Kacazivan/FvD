@@ -51,21 +51,37 @@ new Sortable(playlist, {
 });
 
 
-/////////////////
-//DELETE BUTTON//
-/////////////////
-// Vind alle deleteknoppen
-var deleteButtons = document.querySelectorAll('.deleteButton');
+//////////////////////////////////
+//DELETE BUTTON & EMOJI ANIMATIE//
+//////////////////////////////////
+// Vind alle delete knoppen
+const deleteButtons = document.querySelectorAll('.deleteButton');
 
-// Loop door elke deleteknop en voeg een klikgebeurtenis toe
-deleteButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-        // Vind de ouder <li> van de deleteknop
-        const listItem = button.closest('li');
+// Voeg een click event listener toe aan elke delete knop
+deleteButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Verwijder het bijbehorende nummer
+    const listItem = button.parentNode;
+    listItem.remove();
 
-        // Verwijder het <li>-element
-        listItem.remove();
-    });
+    // Maak een emoji element aan
+    const emoji = document.createElement('span');
+    emoji.innerHTML = '&#x1F62A;'; // Voeg hier de gewenste emoji-code toe
+    emoji.classList.add('emoji');
+
+    // Voeg de emoji toe aan de body van de pagina
+    document.body.appendChild(emoji);
+
+    // Voeg een klasse toe om de animatie te activeren
+    setTimeout(() => {
+      emoji.classList.add('animate');
+    }, 100);
+
+    // Verwijder de emoji na de animatie
+    setTimeout(() => {
+      emoji.remove();
+    }, 1500);
+  });
 });
 
 
