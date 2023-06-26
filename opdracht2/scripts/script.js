@@ -54,6 +54,8 @@ new Sortable(playlist, {
 //////////////////////////////////
 //DELETE BUTTON & EMOJI ANIMATIE//
 //////////////////////////////////
+// https://www.youtube.com/watch?v=Odr24UQs3uY
+// https://www.quackit.com/character_sets/emoji/emoji_v3.0/unicode_emoji_v3.0_characters_all.cfm
 // Vind alle delete knoppen
 const deleteButtons = document.querySelectorAll('.deleteButton');
 
