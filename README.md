@@ -287,10 +287,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/groot2.png" width="375px" alt="toenemende ruimte 2">
 
   Na talloze pogingen (en nog steeds enkele recente mislukkingen) beschouw ik deze opdracht als een waardevolle leerervaring. De afgelopen weken heb ik enorm veel geleerd. Een van de dingen die ik ontdekte, was het feit dat je bibliotheken kunt importeren in je code, wat natuurlijk ontzettend handig is. Ik vond het werken met "drag and drop" erg leuk en interessant, vooral aan het einde toen ik de mogelijkheid had om alles mocht stylen. Het enige wat me teleurstelt, is dat ik er niet in ben geslaagd om de toenemende ruimte tussen de li-elementen op te lossen. Ondanks dat, kijk ik toch met trots terug op mijn leerproces en de vaardigheden die ik heb opgedaan. Hopelijk vinden jullie dat ook! :)
+</details>
 
 
 
-  ## Herkansing reflectie
+## Herkansing reflectie
+
+<details>
+
   ### Je uitkomst - karakteristiek screenshot(s):
   <img src="readme-images/shuffle-button.png" width="375px" alt="uitkomst opdracht 2">
   <img src="readme-images/animatie-button.png" width="375px" alt="uitkomst opdracht 2">
@@ -305,6 +309,4 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/shuffle-button.png" width="375px" alt="Nu">
 
   Het is duidelijk dat we het er allemaal over eens kunnen zijn dat de website er nu aanzienlijk beter uitziet dan voorheen! De code is netter en de lay-out ziet er ook anders uit op desktopformaat. Dat is zeker een verbetering. Ik ben trots op hoe de website er nu uitziet. Ondanks veel mislukte pogingen is het me toch gelukt! Ik ben ook erg blij dat ik bij veel mensen terecht kon met mijn vragen en mislukkingen :). Gedurende dit blok heb ik in ieder geval veel nieuwe aspecten geleerd. Hopelijk zijn jullie net zo tevreden over mijn website als ik! :)
-
-
 </details>
