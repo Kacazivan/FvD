@@ -287,4 +287,24 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/groot2.png" width="375px" alt="toenemende ruimte 2">
 
   Na talloze pogingen (en nog steeds enkele recente mislukkingen) beschouw ik deze opdracht als een waardevolle leerervaring. De afgelopen weken heb ik enorm veel geleerd. Een van de dingen die ik ontdekte, was het feit dat je bibliotheken kunt importeren in je code, wat natuurlijk ontzettend handig is. Ik vond het werken met "drag and drop" erg leuk en interessant, vooral aan het einde toen ik de mogelijkheid had om alles mocht stylen. Het enige wat me teleurstelt, is dat ik er niet in ben geslaagd om de toenemende ruimte tussen de li-elementen op te lossen. Ondanks dat, kijk ik toch met trots terug op mijn leerproces en de vaardigheden die ik heb opgedaan. Hopelijk vinden jullie dat ook! :)
+
+
+
+  ## Herkansing reflectie
+  ### Je uitkomst - karakteristiek screenshot(s):
+  <img src="readme-images/shuffle-button.png" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/animatie-button.png" width="375px" alt="uitkomst opdracht 2">
+  Ik heb een paar elementen toegevoegd aan mijn website, namelijk de shuffle button en een animatie bij het verwijderen van nummers. Ik had wat tijd over en het leek me erg leuk om een animatie toe te voegen bij het verwijderen van de nummers :). Als je op de shuffle button klikt krijg je een random nummer te horen. Telkens als je op de shuffle button klikt, krijg je een random nummer te horen. 
+
+  ### Dit ging goed/Heb ik geleerd: 
+  In de afgelopen dagen heb ik geleerd hoe ik een shuffle-knop kan implementeren en hoe ik een klikanimatie aan een knop kan toevoegen. In het begin had ik wat moeite om de animatie samen te voegen met de verwijderknop, omdat het op een gegeven moment de verwijderfunctie blokkeerde. Gelukkig is het uiteindelijk wel gelukt! Ik had het idee om een randomizer toe te voegen met verschillende emoji's, maar helaas is dat me niet gelukt. Dus op dit moment wordt er slechts één emoji weergegeven bij het verwijderen van een nummer.  <img src="readme-images/animatie-button.png" width="375px" alt="Geleerd">
+
+  ### Dit was lastig/Is niet gelukt:
+  In het begin en na de mondeling had ik grote moeite met het gebruik van "display: grid;". Na de mondeling heb ik mijn HTML aangepast door de footer te verwijderen en twee secties toe te voegen aan de main. Helaas veroorzaakte deze wijziging problemen met "display: grid;", waardoor het niet meer correct werkte. Ik probeerde het eerst zelf op te lossen, maar slaagde er niet in. Het gebrek aan succes zorgde ervoor dat ik het niet meer begreep. Daarom vroeg ik een paar klasgenoten om hulp. Hoewel de meeste klasgenoten het ook niet snapten, was er gelukkig één klasgenoot die het wel begreep. Hij hielp me bij het juist toepassen van "display: grid;" op de juiste elementen. Bovendien heeft Eva me enorm geholpen met de opmaak, omdat ik daar ook moeite mee had. Nu begrijp ik het iets beter, maar ik vind het nog steeds lastig. Hieronder vindt u een vergelijking tussen hoe het er voorheen uitzag en hoe het er nu uitziet:
+  <img src="readme-images/toen.png" width="375px" alt="Toen">
+  <img src="readme-images/shuffle-button.png" width="375px" alt="Nu">
+
+  Het is duidelijk dat we het er allemaal over eens kunnen zijn dat de website er nu aanzienlijk beter uitziet dan voorheen! De code is netter en de lay-out ziet er ook anders uit op desktopformaat. Dat is zeker een verbetering. Ik ben trots op hoe de website er nu uitziet. Ondanks veel mislukte pogingen is het me toch gelukt! Ik ben ook erg blij dat ik bij veel mensen terecht kon met mijn vragen en mislukkingen :). Gedurende dit blok heb ik in ieder geval veel nieuwe aspecten geleerd. Hopelijk zijn jullie net zo tevreden over mijn website als ik! :)
+
+
 </details>

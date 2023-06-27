@@ -423,6 +423,14 @@ li.sortable-ghost{
 /****************/
 /* MEDIA QUERIE */
 /****************/
+
+@media (width>30em){
+  .emoji {
+    top: 60%;
+    left: 67%;
+  }
+}
+
 @media (width>60em){
   main{
     display: grid;
@@ -454,12 +462,8 @@ li.sortable-ghost{
   }
 
   .emoji {
-    position: absolute;
     top: 15%;
     left: 95%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    opacity: 0;
   }
 }
 
